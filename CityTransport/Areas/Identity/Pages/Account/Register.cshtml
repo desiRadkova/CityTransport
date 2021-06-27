@@ -1,0 +1,95 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="shortcut icon" href="~/frontEnd/images/tram.png" />
+    <title>City Transport - Register</title>
+    <link rel="stylesheet" href="~/frontEnd/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url('/frontEnd/images/cucumberTrain.jpg') center center no-repeat; background-size: cover;"></div>
+    <!--Background Image-->
+    <div class="container">
+
+        <!--Login/Register Form-->
+        <div class="login-page">
+            <div class="form">
+                <h1>Register</h1><br>
+                                 <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+
+                                     <div asp-validation-summary="All" class="text-danger"></div>
+                                     <div class="form-group">
+                                         <label asp-for="Input.FirstName"></label>
+                                         <input asp-for="Input.FirstName" class="input" />
+                                         <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+                                     </div>
+                                     <div class="form-group">
+                                         <label asp-for="Input.LastName"></label>
+                                         <input asp-for="Input.LastName" class="input" />
+                                         <span asp-validation-for="Input.LastName" class="text-danger"></span>
+                                     </div>
+                                     <div class="form-group">
+                                         <label>Role:</label>
+                                         <select asp-for="Input.Role" class="select-css">
+                                             <option value="">Role</option>
+                                             <option value="Adult">Adult</option>
+                                             <option value="Student">Student</option>
+                                             <option value="University Student">Univesity Student</option>
+                                             <option value="Parent">Parent</option>
+                                             <option value="Retired">Retired</option>
+                                         </select>
+                                     </div>
+                                     <div class="form-group">
+                                         <label>Gender:</label>
+                                         <select asp-for="Input.City" class="select-css">
+                                             <option value="">City Name</option>
+                                             <option value="Sofia">Sofia</option>
+                                             <option value="Varna">Varna</option>
+                                             <option value="Burgas">Burgas</option>
+                                         </select>
+                                     </div>
+                                     <div class="form-group">
+                                         <label>Gender:</label>
+                                         <select asp-for="Input.Gender" class="select-css">
+                                             <option value="">Gender</option>
+                                             <option value="Male">Male</option>
+                                             <option value="Female">Female</option>
+                                             <option value="Other">Other</option>
+                                         </select>
+                                     </div>
+                                     <div class="form-group">
+                                         <label asp-for="Input.Email"></label>
+                                         <input asp-for="Input.Email" class="input" />
+                                         <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                     </div>
+                                     <div class="form-group">
+                                         <label asp-for="Input.Password"></label>
+                                         <input asp-for="Input.Password" class="input" />
+                                         <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                     </div>
+                                     <br>
+                                     <button type="submit" class="button">Register</button>
+                                 </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+$('.message a').click(function(){
+   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+</script>
+</html>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

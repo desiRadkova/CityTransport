@@ -1,0 +1,99 @@
+@model CityTransport.Models.UserModels.SpecialOffersModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="shortcut icon" href="~/frontEnd/images/tram.png" />
+    <title>City Transport-Special Offers</title>
+    <!--CSS files-->
+    <link rel="stylesheet" href="~/frontEnd/css/main.css">
+    <link rel="stylesheet" href="~/frontEnd/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/frontEnd/css/toggle-button.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!--Background Image-->
+    <div style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url('../../frontEnd/images/white_background.jpg') center center no-repeat; background-size: cover;"></div>
+    <!-- Navigation -->
+    <!--Container-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <!--Logo-->
+            <a class="navbar-brand" href="UserHomePage.html">
+                <div style="padding-left: 20px;"><img src="~/frontEnd/images/tram_user.png" alt="Logo" width="70" height="67"></div><div style="padding-top: 10px;">City Transport</div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="UserHomePage">
+                            My Profile
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="SpecialOffers">Special Offers</a>
+                        <span class="sr-only">(current)</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MyInvoices">My Invoices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MyCard">My Card</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Logout">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-user-info">
+        <!--User Container-->
+        <div class="user-info">
+            <br>
+            <h1>Special Offers</h1><br>
+               
+            @foreach (var offer in Model.Offers)
+            {
+                                   <div class="role-info">
+                                       <a href="ViewOffer/@offer.Id">
+                                           <p class="offer-name">@offer.OfferName</p>
+                                       </a>
+                                       <!--<input asp-for="" name="IsChecked" id="check-box" class="apple-switch" type="checkbox" value="off">-->
+                                       <!--This button is for better UX-->
+                                       <a class="button" href="ViewOffer/@offer.Id">View More</a>
+
+                                       <hr class="invoice-line">
+                                   </div>}
+            <!-- <div class="city-info">
+        <p class="offer-name">@@Html.DisplayFor(model => model.OfferName)</p> <input class="apple-switch" type="checkbox" value="off">
+        <hr class="invoice-line">
+    </div>
+    <div class="gender-info">
+        <p class="offer-name">@@Html.DisplayFor(model => model.OfferName)</p> <input class="apple-switch" type="checkbox" value="off">
+        <hr class="invoice-line">
+
+    </div>-->
+            </br></br>
+
+
+            <!--<a class="button" href="UserHomePage">Save</a></br></br>-->
+        </div>
+    </div>
+
+    <!--JavaScript files-->
+
+    <script type="text/javascript" src="~/frontEnd/javaScript/jquery.slim.js"></script>
+    <script type="text/javascript" src="~/frontEnd/javaScript/bootstrap.bundle.min.js"></script>
+</body>
+
+
+
+
+
+</html>

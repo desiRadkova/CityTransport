@@ -1,0 +1,91 @@
+@model CityTransport.Models.UserModels.AddCardModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="shortcut icon" href="~/frontEnd/images/tram.png" />
+    <title>City Transport-View Offer</title>
+    <!--CSS files-->
+    <link rel="stylesheet" href="~/frontEnd/css/main.css">
+    <link rel="stylesheet" href="~/frontEnd/css/bootstrap.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!--Background Image-->
+    <div style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url('../../frontEnd/images/white_background.jpg') center center no-repeat; background-size: cover;"></div>
+    <!-- Navigation -->
+    <!--Container-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <!--Logo-->
+            <a class="navbar-brand" href="UserHomePage">
+                <div style="padding-left: 20px;"><img src="~/frontEnd/images/tram_user.png" alt="Logo" width="70" height="67"></div><div style="padding-top: 10px;">City Transport</div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Logout">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-user-info">
+        <!--User Container-->
+        <div class="user-info">
+            <br>
+
+            <h1>Add Your Card</h1><br>
+
+                                     <div id="viewContent">
+                                         
+                                         <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
+                                             <hr class="invoice-line">
+                                             <p class="label-name">Enter Your Card Number:</p><br><br>
+                                             <input asp-for="@Model.Card.CardNumber" type="text" value="123456789" class="input" />
+                                             <a href="#popup1"><img src="~/frontEnd/images/question.png" alt="Question" width="25" title="Card Number?" height="25"></a><br><br>
+                                             <div id="popup1" class="overlay">
+                                                 <div class="popup">
+                                                     <h2>Card Number</h2>
+                                                     <a class="close" href="#">&times;</a>
+                                                     <div class="content">
+                                                         <img src="~/frontEnd/images/cardNumber.jpg" alt="Card Number" style="width: 70%; height: 35%;">
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                             <span asp-validation-for="@Model.Card.CardNumber" class="text-danger"></span><br><br>
+                                                 <div class="drop-down">
+                                                                                              
+                                     @if (ViewData.ModelState.IsValid)
+                                     {
+                                   <h2>@ViewData["Message"]</h2>
+                                 <button class="button" type="submit">Save</button>
+                                    }
+                             </div>
+                                         </form>
+
+
+
+                                     </div>
+        </div>
+    </div>
+
+    <!--JavaScript files-->
+
+    <script type="text/javascript" src="~/frontEnd/javaScript/jquery.slim.js"></script>
+    <script type="text/javascript" src="~/frontEnd/javaScript/bootstrap.bundle.min.js"></script>
+</body>
+
+
+
+
+
+</html>

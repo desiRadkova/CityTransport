@@ -1,0 +1,76 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Parents\ParentAddCard.cshtml" />
+    <Content Remove="Views\Parents\ParentChangeInformation.cshtml" />
+    <Content Remove="Views\Parents\ParentChargeCard.cshtml" />
+    <Content Remove="Views\Parents\ParentChildrenCard.cshtml" />
+    <Content Remove="Views\Parents\ParentMyCard.cshtml" />
+    <Content Remove="Views\Parents\ParentMyInvoices.cshtml" />
+    <Content Remove="Views\Parents\ParentPaymentMethodPage.cshtml" />
+    <Content Remove="Views\Parents\ParentSpecialOffers.cshtml" />
+    <Content Remove="Views\Parents\ParentUserHomePage.cshtml" />
+    <Content Remove="Views\Parents\ParentViewChildren.cshtml" />
+    <Content Remove="Views\Parents\ParentViewInvoice.cshtml" />
+    <Content Remove="Views\Parents\ParentViewOffer.cshtml" />
+    <Content Remove="Views\Parents\ParentViewOrder.cshtml" />
+    <Content Remove="Views\Users\AddCard.cshtml" />
+    <Content Remove="Views\Users\ChangeInformation.cshtml" />
+    <Content Remove="Views\Users\ChargeCard.cshtml" />
+    <Content Remove="Views\Users\ChargeCardOneKind.cshtml" />
+    <Content Remove="Views\Users\MyCard.cshtml" />
+    <Content Remove="Views\Users\MyInvoices.cshtml" />
+    <Content Remove="Views\Users\PaymentMethodPage.cshtml" />
+    <Content Remove="Views\Users\SpecialOffers.cshtml" />
+    <Content Remove="Views\Users\UserHomePage.cshtml" />
+    <Content Remove="Views\Users\ViewInvoice.cshtml" />
+    <Content Remove="Views\Users\ViewOffer.cshtml" />
+    <Content Remove="Views\Users\ViewOrder.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+    <PackageReference Include="QRCoder" Version="1.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Parents\ParentAddCard.cshtml" />
+    <None Include="Views\Parents\ParentChangeInformation.cshtml" />
+    <None Include="Views\Parents\ParentChargeCard.cshtml" />
+    <None Include="Views\Parents\ParentChildrenCard.cshtml" />
+    <None Include="Views\Parents\ParentMyCard.cshtml" />
+    <None Include="Views\Parents\ParentMyInvoices.cshtml" />
+    <None Include="Views\Parents\ParentPaymentMethodPage.cshtml" />
+    <None Include="Views\Parents\ParentSpecialOffers.cshtml" />
+    <None Include="Views\Parents\ParentUserHomePage.cshtml" />
+    <None Include="Views\Parents\ParentViewOffer.cshtml" />
+    <None Include="Views\Parents\ParentViewInvoice.cshtml" />
+    <None Include="Views\Parents\ParentViewChildren.cshtml" />
+    <None Include="Views\Parents\ParentViewOrder.cshtml" />
+    <None Include="Views\Users\ChangeInformation.cshtml" />
+    <None Include="Views\Users\ChargeCard.cshtml" />
+    <None Include="Views\Users\ChargeCardOneKind.cshtml" />
+    <None Include="Views\Users\ViewOrder.cshtml" />
+    <None Include="Views\Users\ViewInvoice.cshtml" />
+    <None Include="Views\Users\AddCard.cshtml" />
+    <None Include="Views\Users\ViewOffer.cshtml" />
+    <None Include="Views\Users\MyCard.cshtml" />
+    <None Include="Views\Users\MyInvoices.cshtml" />
+    <None Include="Views\Users\PaymentMethodPage.cshtml" />
+    <None Include="Views\Users\SpecialOffers.cshtml" />
+    <None Include="Views\Users\UserHomePage.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Identity\Services\" />
+    <Folder Include="Views\Admin\" />
+  </ItemGroup>
+
+</Project>

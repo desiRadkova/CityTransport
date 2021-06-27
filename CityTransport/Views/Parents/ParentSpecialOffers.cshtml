@@ -1,0 +1,90 @@
+@model CityTransport.Models.ParentModels.ParentSpecialOffersModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="shortcut icon" href="~/../frontEnd/images/tram.png" />
+    <title>City Transport-Parent Special Offers</title>
+    <!--CSS files-->
+    <link rel="stylesheet" href="~/../frontEnd/css/parent-main.css">
+    <link rel="stylesheet" href="~/../frontEnd/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/../frontEnd/css/toggle-button.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!--Background Image-->
+    <div style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url('../../frontEnd/images/white_background.jpg') center center no-repeat; background-size: cover;"></div>
+    <!-- Navigation -->
+    <!--Container-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <!--Logo-->
+            <a class="navbar-brand" href="ParentUserHomePage.html">
+                <div style="padding-left: 20px;"><img src="~/../frontEnd/images/tram_green.png" alt="Logo" width="70" height="67"></div><div style="padding-top: 10px;">City Transport</div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="ParentUserHomePage">
+                            My Profile
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="ParentSpecialOffers">Special Offers</a>
+                        <span class="sr-only">(current)</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ParentMyInvoices">My Invoices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ParentMyCard">My Card</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ParentChildrenCard">Children Card</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Logout">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-user-info">
+        <!--User Container-->
+        <div class="user-info">
+            <div class="user-info">
+                <br>
+                <h1>Special Offers</h1><br>
+
+                @foreach (var offer in Model.Offers)
+                {
+                    <div class="role-info">
+                        <a href="ViewOffer/@offer.Id">
+                            <p class="offer-name">@offer.OfferName</p>
+                        </a>
+                        <!--<input asp-for="" name="IsChecked" id="check-box" class="apple-switch" type="checkbox" value="off">-->
+                        <!--This button is for better UX-->
+                        <a class="button" href="ParentViewOffer/@offer.Id">View More</a>
+
+                        <hr class="invoice-line">
+                    </div>}
+            </div>
+        </div></div>
+
+    <!--JavaScript files-->
+
+    <script type="text/javascript" src="~/../frontEnd/javaScript/jquery.slim.js"></script>
+    <script type="text/javascript" src="~/../frontEnd/javaScript/bootstrap.bundle.min.js"></script>
+</body>
+
+
+
+
+
+</html>

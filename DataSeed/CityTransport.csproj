@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Parents\ParentChangeInformation.cshtml" />
+    <Content Remove="Views\Parents\ParentChargeCard.cshtml" />
+    <Content Remove="Views\Parents\ParentChargeCardOneKind.cshtml" />
+    <Content Remove="Views\Parents\ParentChildrenCard.cshtml" />
+    <Content Remove="Views\Parents\ParentMyCard.cshtml" />
+    <Content Remove="Views\Parents\ParentMyInvoices.cshtml" />
+    <Content Remove="Views\Parents\ParentPaymentMethodPage.cshtml" />
+    <Content Remove="Views\Parents\ParentSpecialOffers.cshtml" />
+    <Content Remove="Views\Parents\ParentUserHomePage.cshtml" />
+    <Content Remove="Views\Users\ChangeInformation.cshtml" />
+    <Content Remove="Views\Users\ChargeCard.cshtml" />
+    <Content Remove="Views\Users\ChargeCardOneKind.cshtml" />
+    <Content Remove="Views\Users\Index.cshtml" />
+    <Content Remove="Views\Users\MyCard.cshtml" />
+    <Content Remove="Views\Users\MyInvoices.cshtml" />
+    <Content Remove="Views\Users\OtherRegister.cshtml" />
+    <Content Remove="Views\Users\PaymentMethodPage.cshtml" />
+    <Content Remove="Views\Users\Register.cshtml" />
+    <Content Remove="Views\Users\SpecialOffers.cshtml" />
+    <Content Remove="Views\Users\UserHomePage.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Parents\ParentChangeInformation.cshtml" />
+    <None Include="Views\Parents\ParentChargeCard.cshtml" />
+    <None Include="Views\Parents\ParentChargeCardOneKind.cshtml" />
+    <None Include="Views\Parents\ParentChildrenCard.cshtml" />
+    <None Include="Views\Parents\ParentMyCard.cshtml" />
+    <None Include="Views\Parents\ParentMyInvoices.cshtml" />
+    <None Include="Views\Parents\ParentPaymentMethodPage.cshtml" />
+    <None Include="Views\Parents\ParentSpecialOffers.cshtml" />
+    <None Include="Views\Parents\ParentUserHomePage.cshtml" />
+    <None Include="Views\Users\ChangeInformation.cshtml" />
+    <None Include="Views\Users\ChargeCard.cshtml" />
+    <None Include="Views\Users\ChargeCardOneKind.cshtml" />
+    <None Include="Views\Users\Index.cshtml" />
+    <None Include="Views\Users\MyCard.cshtml" />
+    <None Include="Views\Users\MyInvoices.cshtml" />
+    <None Include="Views\Users\OtherRegister.cshtml" />
+    <None Include="Views\Users\PaymentMethodPage.cshtml" />
+    <None Include="Views\Users\Register.cshtml" />
+    <None Include="Views\Users\SpecialOffers.cshtml" />
+    <None Include="Views\Users\UserHomePage.cshtml" />
+  </ItemGroup>
+
+</Project>

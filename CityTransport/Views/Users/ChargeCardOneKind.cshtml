@@ -1,0 +1,214 @@
+@model CityTransport.Models.UserModels.ChargeCardOneKindModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="shortcut icon" href="~/frontEnd/images/tram.png" />
+    <title>City Transport-Charge Card Page</title>
+    <!--CSS files-->
+    <link rel="stylesheet" href="~/frontEnd/css/main.css">
+    <link rel="stylesheet" href="~/frontEnd/css/bootstrap.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!--Background Image-->
+    <div style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url('../../frontEnd/images/white_background.jpg') center center no-repeat; background-size: cover;"></div>
+    <!-- Navigation -->
+    <!--Container-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <!--Logo-->
+            <a class="navbar-brand" href="UserHomePage">
+                <div style="padding-left: 20px;"><img src="~/frontEnd/images/tram_user.png" alt="Logo" width="70" height="67"></div><div style="padding-top: 10px;">City Transport</div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="UserHomePage">
+                            My Profile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="SpecialOffers">Special Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MyInvoices">My Invoices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MyCard">My Card</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Logout">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-user-info">
+        <!--User Container-->
+        <div class="user-info">
+            <br>
+            <h1>Charge Card</h1><br>
+                                <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
+                                    <!--Dynamic DropDown-->
+                                    <div class="drop-down">
+                                        @if (Model.City == "Sofia")
+                                        {
+                                           
+                                        <p class="label-name">Transport Type:</p>
+                                        <select asp-for="@Model.Order.TransportType" class="select-css" id="transportType" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+                                            <option value="">Select Transport Type</option>
+                                            <option value="Tram">Tram</option>
+                                            <option value="Bus">Bus</option>
+                                            <option value="Trolley">Trolley</option>
+                                            <option value="Subway">Subway</option>
+
+                                        </select>
+
+
+                                    }
+                                    else
+                                    {
+                                        <p class="label-name">Transport Type:</p>
+                                        <select asp-for="@Model.Order.TransportType" class="select-css" id="transportType" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+                                            <option value="">Select Transport Type</option>
+                                            <option value="Bus">Bus</option>
+                                            <option value="Trolley">Trolley</option>
+                                        </select>
+                                    }
+                                    </div><br>
+
+                                    <br>
+                                    <div class="drop-down">
+                                        <p class="label-name">Transport Number:</p>
+                                        <script type="text/javascript" language="JavaScript">
+                                            document.write('<select  class="select-css"  name="transportNumber" id="transportNumber"><option value="">Select Transport Number</option></select>')
+                                        </script>
+                                        <noscript>
+                                            <select asp-for="@Model.Order.TransportNumber" class="select-css" id="transportNumber">
+                                                <option value="">Select Transport Number</option>
+
+                                            </select>
+                                        </noscript>
+
+                                        </div>
+                                        <br><br>
+
+                                        <div class="drop-down">
+                                            <button class="button" type="submit">Next</button><br><br></div>
+                                        </form>
+        </div></div>
+
+        <!--JavaScript files-->
+        <script language="javascript" type="text/javascript">
+            //Dynamic DropDown Select Lists
+            function dynamicdropdown(listindex) {
+                switch (listindex) {
+                    case "Bus":
+                        document.getElementById("transportNumber").options[0] = new Option("Select Transport Number", "");
+                        document.getElementById("transportNumber").options[1] = new Option("11", "11");
+                        document.getElementById("transportNumber").options[2] = new Option("45", "45");
+                        document.getElementById("transportNumber").options[3] = new Option("60", "60");
+                        document.getElementById("transportNumber").options[4] = new Option("65", "65");
+                        document.getElementById("transportNumber").options[5] = new Option("72", "72");
+                        document.getElementById("transportNumber").options[6] = new Option("73", "73");
+                        document.getElementById("transportNumber").options[7] = new Option("74", "74");
+                        document.getElementById("transportNumber").options[8] = new Option("75", "75");
+                        document.getElementById("transportNumber").options[9] = new Option("76", "76");
+                        document.getElementById("transportNumber").options[10] = new Option("77", "77");
+                        document.getElementById("transportNumber").options[11] = new Option("78", "78");
+                        document.getElementById("transportNumber").options[12] = new Option("79", "79");
+                        document.getElementById("transportNumber").options[13] = new Option("82", "82");
+                        document.getElementById("transportNumber").options[14] = new Option("83", "83");
+                        document.getElementById("transportNumber").options[15] = new Option("85", "85");
+                        document.getElementById("transportNumber").options[16] = new Option("86", "86");
+                        document.getElementById("transportNumber").options[17] = new Option("88", "88");
+                        document.getElementById("transportNumber").options[18] = new Option("94", "94");
+                        document.getElementById("transportNumber").options[19] = new Option("101", "101");
+                        document.getElementById("transportNumber").options[20] = new Option("102", "102");
+                        document.getElementById("transportNumber").options[21] = new Option("107", "107");
+                        document.getElementById("transportNumber").options[22] = new Option("108", "108");
+                        document.getElementById("transportNumber").options[23] = new Option("111", "111");
+                        document.getElementById("transportNumber").options[24] = new Option("113", "113");
+                        document.getElementById("transportNumber").options[25] = new Option("120", "120");
+                        document.getElementById("transportNumber").options[26] = new Option("204", "204");
+                        document.getElementById("transportNumber").options[27] = new Option("213", "213");
+                        document.getElementById("transportNumber").options[28] = new Option("260", "260");
+                        document.getElementById("transportNumber").options[29] = new Option("280", "280");
+                        document.getElementById("transportNumber").options[30] = new Option("285", "285");
+                        document.getElementById("transportNumber").options[31] = new Option("294", "294");
+                        document.getElementById("transportNumber").options[32] = new Option("304", "304");
+                        document.getElementById("transportNumber").options[33] = new Option("305", "305");
+                        document.getElementById("transportNumber").options[34] = new Option("310", "310");
+                        document.getElementById("transportNumber").options[35] = new Option("384", "384");
+                        document.getElementById("transportNumber").options[36] = new Option("404", "404");
+                        document.getElementById("transportNumber").options[37] = new Option("413", "413");
+                        document.getElementById("transportNumber").options[38] = new Option("604", "604");
+                        break;
+                    case "Trolley":
+                        document.getElementById("transportNumber").options[0] = new Option("Select Transport Number", "");
+                        document.getElementById("transportNumber").options[1] = new Option("1", "1");
+                        document.getElementById("transportNumber").options[2] = new Option("2", "2");
+                        document.getElementById("transportNumber").options[3] = new Option("3", "3");
+                        document.getElementById("transportNumber").options[4] = new Option("4", "4");
+                        document.getElementById("transportNumber").options[5] = new Option("5", "5");
+                        document.getElementById("transportNumber").options[6] = new Option("6", "6");
+                        document.getElementById("transportNumber").options[7] = new Option("7", "7");
+                        document.getElementById("transportNumber").options[8] = new Option("8", "8");
+                        document.getElementById("transportNumber").options[9] = new Option("9", "9");
+                        document.getElementById("transportNumber").options[10] = new Option("10", "10");
+                        document.getElementById("transportNumber").options[11] = new Option("11", "11");
+                        document.getElementById("transportNumber").options[12] = new Option("------------------------------------","");
+                        break;
+                    case "Tram":
+                        document.getElementById("transportNumber").options[0] = new Option("Select Transport Number", "");
+                        document.getElementById("transportNumber").options[1] = new Option("1", "1");
+                        document.getElementById("transportNumber").options[2] = new Option("2", "2");
+                        document.getElementById("transportNumber").options[3] = new Option("3", "3");
+                        document.getElementById("transportNumber").options[4] = new Option("4", "4");
+                        document.getElementById("transportNumber").options[5] = new Option("5", "5");
+                        document.getElementById("transportNumber").options[6] = new Option("6", "6");
+                        document.getElementById("transportNumber").options[7] = new Option("7", "7");
+                        document.getElementById("transportNumber").options[8] = new Option("8", "8");
+                        document.getElementById("transportNumber").options[9] = new Option("9", "9");
+                        document.getElementById("transportNumber").options[10] = new Option("10", "10");
+                        document.getElementById("transportNumber").options[11] = new Option("11", "11");
+                        document.getElementById("transportNumber").options[12] = new Option("12", "12");
+                        document.getElementById("transportNumber").options[13] = new Option("13", "13");
+                        document.getElementById("transportNumber").options[14] = new Option("14", "14");
+                        document.getElementById("transportNumber").options[15] = new Option("15", "15");
+                        document.getElementById("transportNumber").options[16] = new Option("16", "16");
+                        document.getElementById("transportNumber").options[17] = new Option("17", "17");
+                        document.getElementById("transportNumber").options[18] = new Option("18", "18");
+                        document.getElementById("transportNumber").options[19] = new Option("19", "19");
+                        document.getElementById("transportNumber").options[20] = new Option("20", "20");
+                        document.getElementById("transportNumber").options[21] = new Option("21", "21");
+                        document.getElementById("transportNumber").options[22] = new Option("22", "22");
+                        document.getElementById("transportNumber").options[23] = new Option("23", "23");
+                        document.getElementById("transportNumber").options[24] = new Option("------------------------------------","");
+                        break;
+                    case "Subway":
+                        document.getElementById("transportNumber").options[0] = new Option("Select Transport Number", "");
+                        document.getElementById("transportNumber").options[1] = new Option("All Subway Lines", "Subway Line: All Subway Lines");
+                        document.getElementById("transportNumber").options[2] = new Option("------------------------------------","");
+                        break;
+                }
+                return true;
+            }
+        </script>
+        <script type="text/javascript" src="~/frontEnd/javaScript/jquery.slim.js"></script>
+        <script type="text/javascript" src="~/frontEnd/javaScript/bootstrap.bundle.min.js"></script>
+        
+</body>
+
+
+
+
+
+</html>

@@ -1,0 +1,114 @@
+@model CityTransport.Models.UserModels.ViewOrderModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="shortcut icon" href="~/frontEnd/images/tram.png" />
+    <title>City Transport-View Offer</title>
+    <!--CSS files-->
+    <link rel="stylesheet" href="~/frontEnd/css/main.css">
+    <link rel="stylesheet" href="~/frontEnd/css/bootstrap.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!--Background Image-->
+    <div style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url('../../frontEnd/images/white_background.jpg') center center no-repeat; background-size: cover;"></div>
+    <!-- Navigation -->
+    <!--Container-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <!--Logo-->
+            <a class="navbar-brand" href="ParentUserHomePage">
+                <div style="padding-left: 20px;"><img src="~/frontEnd/images/tram_user.png" alt="Logo" width="70" height="67"></div><div style="padding-top: 10px;">City Transport</div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="ParentUserHomePage">
+                            My Profile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ParentSpecialOffers">Special Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ParentMyInvoices">My Invoices</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="ParentMyCard">My Card</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Logout">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-user-info">
+        <!--User Container-->
+        <div class="user-info">
+            <br>
+
+            <h1>Order Preview</h1><br>
+
+                                      <div id="viewContent">
+                                         
+                                          <form method="post">
+                                              <hr class="invoice-line">
+                                              <p class="label-name">Owner Name: @Model.FirstName @Model.LastName</p><br>
+
+                                              <p class="label-name">Transport Kind: @Model.TransportKind</p><br>
+                                              @if (Model.TransportKind == "One Kind")
+                                              {
+                                              <p class="label-name">Transport Type: @Model.TransportType</p><br>
+                                              <p class="label-name">Transport Number: @Model.TransportNumber</p><br>
+                                              }
+                                              <p class="label-name">Start Date: @Model.StartDate.ToShortDateString() </p><br>
+                                              <p class="label-name">Price: @Model.StandartPrice BGN</p><br>
+                                              @if (Model.SpecialOfferId != null)
+                                              {
+                                                  <p class="label-name">Special Offer Name:@Model.OfferName</p><br>
+                                                  <p class="label-name">Special Offer Price:@Model.OfferPrice BGN</p><br>}
+                                              <p class="label-name">Card Duration:</p><br>
+                                              <div class="drop-down">
+                                                  <select asp-for="@Model.Duration" class="select-css" id="duration">
+                                                      <option value="">Select Card Duration</option>
+                                                      <option value="1">One Month</option>
+                                                      <option value="2">Two Months</option>
+                                                      <option value="3">Three Months</option>
+                                                      <option value="12">One Year</option>
+
+                                                  </select>
+                                              </div><br><br>
+
+
+                                              <div class="drop-down">
+
+                                                  <button class="button" type="submit">Next</button>
+                                              </div>
+                                          </form> 
+
+
+
+                                      </div>
+        </div>
+    </div>
+
+    <!--JavaScript files-->
+
+    <script type="text/javascript" src="~/frontEnd/javaScript/jquery.slim.js"></script>
+    <script type="text/javascript" src="~/frontEnd/javaScript/bootstrap.bundle.min.js"></script>
+</body>
+
+
+
+
+
+</html>

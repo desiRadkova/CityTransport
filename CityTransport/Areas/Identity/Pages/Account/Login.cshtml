@@ -1,0 +1,73 @@
+﻿@page
+@model LoginModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="shortcut icon" href="~/frontEnd/images/tram.png" />
+    <title>City Transport</title>
+    <!--CSS files-->
+    <link rel="stylesheet" href="~/frontEnd/css/main.css">
+
+    <!-- Facebook OG Tags -->
+
+    <meta property="og:url" content="Index" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="City Transport System" />
+    <meta property="og:description" content="City Transport System allows user to recharge his/her card for City Transport" />
+    <meta property="og:image" content="~/frontEnd/images/tram.png" />
+
+    <!-- Other Tags -->
+    <meta name="description" content="City Transport System - Bulgarian City Transport System where users could recharge their card from everyware with the device from their pocket." />
+    <meta name="keywords" content="City Transport, city transport, Bulgarian City Transport, charge transport card, city, transport, urban" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url('../frontEnd/images/Sofia-Bulgaria-at-Night.jpg') center center no-repeat; background-size: cover;"></div>
+    <!--Background Image-->
+    <div class="container">
+
+        <!--Login/Register Form-->
+        <div class="login-page">
+            <div class="form">
+                <a href="index.html"><img src="~/frontEnd/images/tram.png" alt="Logo" style="opacity: 1.0" /></a><br /><h1>City Transport</h1><br>
+                <form class="login-form" method="post">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Input.Email"></label>
+                        <input asp-for="Input.Email" class="input" />
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Input.Password"></label>
+                        <input asp-for="Input.Password" class="input" />
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="button">Log in</button>
+                    </div>
+                    <div class="form-group">
+                        <p>
+                            <a asp-page="./ForgotPassword">Forgot your password?</a>
+                        </p>
+                        <p>
+                            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--JavaScript files-->
+    <script type="text/javascript" src="~/frontEnd/javaScript/jquery.slim.js"></script>
+    <script type="text/javascript" src="~/frontEnd/javaScript/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

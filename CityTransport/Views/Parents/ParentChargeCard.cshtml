@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<link rel="shortcut icon" href="~/../frontEnd/images/tram.png" />
+<title>City Transport-Charge Card Page</title>
+<!--CSS files-->
+<link rel="stylesheet" href="~/../frontEnd/css/parent-main.css">
+<link rel="stylesheet" href="~/../frontEnd/css/bootstrap.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!--Background Image-->
+<div style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url('../../frontEnd/images/white_background.jpg') center center no-repeat; background-size: cover;"></div>
+<!-- Navigation -->
+
+<!--Container-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+    <!--Logo-->
+	<a class="navbar-brand" href="ParentUserHomePage.html">
+          <div style="padding-left: 20px;"><img src="~/../frontEnd/images/tram_green.png" alt="Logo" width="70" height="67"></div><div style="padding-top: 10px;">City Transport</div>
+        </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="ParentUserHomePage">My Profile
+              </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ParentSpecialOffers">Special Offers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ParentMyInvoices">My Invoices</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ParentMyCard">My Card</a>
+        </li>
+		<li class="nav-item">
+          <a class="nav-link" href="ParentChildrenCard">Children Card</a>
+        </li>
+		<li class="nav-item">
+          <a class="nav-link" asp-area="Identity" asp-page="/Account/Logout">Log Out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-user-info">
+<!--User Container--> 
+<div class="user-info"><br>
+<h1>Charge Card</h1><br>
+
+	  <div class="drop-down">
+	  <p class="label-name">Transport Kind:</p>
+      <select class="select-css">
+  <option value="">Select Transport Kind</option>
+  <option value="1">All Kind</option>
+  <option value="0">One </option>
+</select><br>
+	  <p class="label-name">For How long:</p>
+	  <select class="select-css">
+  <option value="">Select Card Duration</option>
+  <option value="1">One Mounth</option>
+  <option value="0">Two Mounths</option>
+  <option value="2">Three Mounths</option>
+  <option value="2">One Year</option>
+</select></div></br></br>
+      <a class="button" href="ParentPaymentMethodPage">Next</a></br></br>
+</div>
+ 
+<!--JavaScript files-->
+
+<script type="text/javascript" src="~/../frontEnd/javaScript/jquery.slim.js"></script>
+<script type="text/javascript" src="~/../frontEnd/javaScript/bootstrap.bundle.min.js"></script>  
+</body>
+
+
+
+
+
+</html>
