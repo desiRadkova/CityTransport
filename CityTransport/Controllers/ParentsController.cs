@@ -485,15 +485,221 @@ namespace CityTransport.Controllers
 
         public IActionResult ParentChargeCard()
         {
+            string userId = GetCurrentUserId();
+            var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
+            var order = this.orderService.GetAllOrders().FirstOrDefault(o => o.UserId == userId);
+            var parent = this.parentService.GetAllParents().FirstOrDefault(p => p.UserId == userId);//Finding the record for current user
+            var children = this.cardService.GetAllCards().FirstOrDefault(c => c.CardNumber == parent.ChildrenCardNumber);//Finding ChildrenCardNumber in Card Table
+            var names = this.usersService.GetAllUsers().FirstOrDefault(n => n.Id == children.UserId);
 
+            if (order == null && user.SpecialOfferId == 113)//For All Kind Createing Order
+            {
+                var Order = new Order
+                {
+                    TransportKind = "All Kind",
+                    UserId = GetCurrentUserId(),
+                    StartDate = DateTime.Today,
+                    EndDate = DateTime.Today,
+                    StandartPrice = 50
+
+                };
+                
+                    var ChildrenOrder = new Order
+                    {
+                        TransportKind = "All Kind",
+                        UserId = children.UserId,
+                        StartDate = DateTime.Today,
+                        EndDate = DateTime.Today,
+                        StandartPrice = 50
+
+                    };
+
+
+                this.orderService.Add(Order);
+                this.orderService.Add(ChildrenOrder);
+
+            }else if(order == null && user.SpecialOfferId != 113)
+            {
+                var Order = new Order
+                {
+                    TransportKind = "All Kind",
+                    UserId = GetCurrentUserId(),
+                    StartDate = DateTime.Today,
+                    EndDate = DateTime.Today,
+                    StandartPrice = 50
+
+                };
+                this.orderService.Add(Order);
+            };
             return View();
         }
-        public IActionResult ParentPaymentMethodPage()
+        public IActionResult ParentViewOrder(string returnUrl = null)
         {
-            return View();
+            string userId = GetCurrentUserId();
+            var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
+            var order = this.orderService.GetAllOrders().FirstOrDefault(o => o.UserId == userId);
+            var offer = this.specialOffersService.GetAllOffers().FirstOrDefault(s => s.SpecialOffersID == user.SpecialOfferId);
+            var parent = this.parentService.GetAllParents().FirstOrDefault(p => p.UserId == userId);//Finding the record for current user
+            var children = this.cardService.GetAllCards().FirstOrDefault(c => c.CardNumber == parent.ChildrenCardNumber);//Finding ChildrenCardNumber in Card Table
+            var names = this.usersService.GetAllUsers().FirstOrDefault(n => n.Id == children.UserId);
+
+
+            var viewModel = new ParentViewOrderModel()
+            {
+
+                TransportKind = order.TransportKind,
+                TransportType = order.TransportType,
+                TransportNumber = order.TransportNumber,
+                StartDate = order.StartDate,
+                EndDate = order.EndDate,
+                StandartPrice = order.StandartPrice,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                SpecialOfferID = user.SpecialOfferId,
+                OfferName = offer.OfferName,
+                OfferPrice = offer.OfferPrice,
+                Duration = order.Duration
+
+            };
+
+            return View(viewModel);
+
+
         }
-       
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ParentViewOrder(ParentViewOrderModel model)
+        {
+            string userId = GetCurrentUserId();
+            var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
+            var order = this.orderService.GetAllOrders().FirstOrDefault(o => o.UserId == userId);
+            var parent = this.parentService.GetAllParents().FirstOrDefault(p => p.UserId == userId);//Finding the record for current user
+             var children = this.cardService.GetAllCards().FirstOrDefault(c => c.CardNumber == parent.ChildrenCardNumber);//Finding ChildrenCardNumber in Card Table
+            var names = this.usersService.GetAllUsers().FirstOrDefault(n => n.Id == children.UserId);
+            var childrenOrder = this.orderService.GetAllOrders().FirstOrDefault(cho => cho.UserId == children.UserId);
+
+            if (this.ModelState.IsValid)
+            {
+
+                order.Duration = model.Duration;
+                if (user.SpecialOfferId == 113)
+                {
+                    order.Duration = model.Duration;
+                    childrenOrder.Duration = model.Duration;
+                }
+
+                    this.orderService.Edit(order);
+                    this.orderService.Edit(childrenOrder);
+
+                return this.RedirectToAction("ParentPaymentMethodPage", "Parents");
+            };
+
+            return View(model);
+        }
+        public IActionResult ParentPaymentMethodPage(string returnUrl = null)
+        {
+            string userId = GetCurrentUserId();
+            var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
+            var order = this.orderService.GetAllOrders().FirstOrDefault(o => o.UserId == userId);
+            var card = this.cardService.GetAllCards().FirstOrDefault(c => c.UserId == userId);
+            var offer = this.specialOffersService.GetAllOffers().FirstOrDefault(s => s.SpecialOffersID == user.SpecialOfferId);
+
+            var viewModel = new ParentPaymentMethodPageModel()
+            {
+
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                SpecialOfferId = user.SpecialOfferId,
+                Duration = order.Duration,
+                OfferPrice = offer.OfferPrice,
+                StandartPrice = card.StandartPrice,
+
+                MyInvoices = new MyInvoices()
 
 
+
+            };
+
+
+            return View(viewModel);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ParentPaymentMethodPage(ParentPaymentMethodPageModel model)
+        {
+            string userId = GetCurrentUserId();
+            var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
+            var card = this.cardService.GetAllCards().FirstOrDefault(c => c.UserId == userId);
+            var order = this.orderService.GetAllOrders().FirstOrDefault(or => or.UserId == userId);
+            var parent = this.parentService.GetAllParents().FirstOrDefault(p => p.UserId == userId);//Finding the record for current user
+            var children = this.cardService.GetAllCards().FirstOrDefault(c => c.CardNumber == parent.ChildrenCardNumber);//Finding ChildrenCardNumber in Card Table
+            var names = this.usersService.GetAllUsers().FirstOrDefault(n => n.Id == children.UserId);
+            var childrenOrder = this.orderService.GetAllOrders().FirstOrDefault(cho => cho.UserId == children.UserId);
+
+            if (user.SpecialOfferId == 113)
+            {
+                var ParentMyInvoices = new MyInvoices
+                {
+                    UserId = order.UserId,
+                    TransportKind = order.TransportKind,
+                    TransportType = order.TransportType,
+                    TransportNumber = order.TransportNumber,
+                    StartDate = order.StartDate,
+                    EndDate = order.StartDate.AddMonths(order.Duration),
+                    StandartPrice = order.StandartPrice * order.Duration,
+                    Duration = order.Duration
+
+                };
+                var ChildrenMyInvoices = new MyInvoices
+                {
+                    UserId = childrenOrder.UserId,
+                    TransportKind = childrenOrder.TransportKind,
+                    TransportType = childrenOrder.TransportType,
+                    TransportNumber = childrenOrder.TransportNumber,
+                    StartDate = childrenOrder.StartDate,
+                    EndDate = childrenOrder.StartDate.AddMonths(order.Duration),
+                    StandartPrice = childrenOrder.StandartPrice * childrenOrder.Duration,
+                    Duration = childrenOrder.Duration
+
+                };
+                this.myInvoicesService.Add(ParentMyInvoices);
+                this.myInvoicesService.Add(ChildrenMyInvoices);
+            }
+            else if (user.SpecialOfferId != 113)
+            {
+                var MyInvoices = new MyInvoices
+                {
+                    UserId = order.UserId,
+                    TransportKind = order.TransportKind,
+                    TransportType = order.TransportType,
+                    TransportNumber = order.TransportNumber,
+                    StartDate = order.StartDate,
+                    EndDate = order.StartDate.AddMonths(order.Duration),
+                    StandartPrice = order.StandartPrice * order.Duration,
+                    Duration = order.Duration
+
+                };
+
+
+                this.myInvoicesService.Add(MyInvoices);
+            }
+            if (this.ModelState.IsValid)
+            {
+
+                card.StartDate = DateTime.Today;
+                card.EndDate = DateTime.Today.AddMonths(order.Duration);
+
+
+
+                this.cardService.Edit(card);
+                this.orderService.Delete(order);
+                this.orderService.Delete(childrenOrder);
+
+                return this.RedirectToAction("ParentUserHomePage", "Parents");
+            }
+
+
+            return View(model);
+        }
     }
 }

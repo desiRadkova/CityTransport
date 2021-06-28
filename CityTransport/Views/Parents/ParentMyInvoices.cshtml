@@ -63,7 +63,7 @@
             {
                 @foreach (var invoice in Model.MyInvoices)
                 {
-                    <p class="invoice">Invoice Numer @invoice.Id</p><a class="button" href="ViewInvoice/@invoice.Id">Details</a><br><br>
+                    <p class="invoice">Invoice Numer @invoice.Id</p><a class="button" href="ParentViewInvoice/@invoice.Id">Details</a><br><br>
                     <hr class="invoice-line">
 
                 }
@@ -79,9 +79,4 @@
         <script type="text/javascript" src="~/../frontEnd/javaScript/jquery.slim.js"></script>
         <script type="text/javascript" src="~/../frontEnd/javaScript/bootstrap.bundle.min.js"></script>
 </body>
-
-
-
-
-
 </html>
