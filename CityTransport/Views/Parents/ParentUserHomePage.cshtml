@@ -80,16 +80,18 @@
                 <p class="label-name">Role</p><h4 class="label-detail">@Html.DisplayFor(model => model.Role)</h4>
             </div>
             <div class="city-info">
-                <p class="label-name">City</p> <h4 class="label-detail">@Html.DisplayFor(model => model.CityName)</h4>
+                <p class="label-name">City</p> <h4 class="label-detail">@Html.DisplayFor(model => model.City)</h4>
             </div>
             <div class="gender-info">
-                <p class="label-name">Gender</p> <h4 class="label-detail">@Html.DisplayFor(model => model.Gender)</h4>
+                <p class="label-name">Gender</p> <h4 class="label-detail">@Html.DisplayFor(model => model.Gender)</h4><br>
+                <p class="label-name">Card End Date</p> <h4 class="label-detail">@Model.EndDate.ToShortDateString()</h4>
             </div>
             <div class="email-info">
                 <p class="label-name">Email</p> <h4 class="label-detail">@Html.DisplayFor(model => model.Email)</h4>
             </div><br>
 
             <a class="button" href="ParentChargeCard">Charge Card</a></br></br>
+            <a class="button" href="ParentChildrenInfo">My Children Info</a></br></br>
             <a class="button" href="ParentChangeInformation">Change Information</a></br>
         </div>
     </div>

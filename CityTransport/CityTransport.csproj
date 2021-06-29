@@ -9,6 +9,7 @@
     <Content Remove="Views\Parents\ParentChangeInformation.cshtml" />
     <Content Remove="Views\Parents\ParentChargeCard.cshtml" />
     <Content Remove="Views\Parents\ParentChildrenCard.cshtml" />
+    <Content Remove="Views\Parents\ParentChildrenInfo.cshtml" />
     <Content Remove="Views\Parents\ParentMyCard.cshtml" />
     <Content Remove="Views\Parents\ParentMyInvoices.cshtml" />
     <Content Remove="Views\Parents\ParentPaymentMethodPage.cshtml" />
@@ -50,6 +51,7 @@
     <None Include="Views\Parents\ParentPaymentMethodPage.cshtml" />
     <None Include="Views\Parents\ParentSpecialOffers.cshtml" />
     <None Include="Views\Parents\ParentUserHomePage.cshtml" />
+    <None Include="Views\Parents\ParentChildrenInfo.cshtml" />
     <None Include="Views\Parents\ParentViewOffer.cshtml" />
     <None Include="Views\Parents\ParentViewInvoice.cshtml" />
     <None Include="Views\Parents\ParentViewChildren.cshtml" />

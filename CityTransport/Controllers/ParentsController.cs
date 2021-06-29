@@ -201,7 +201,7 @@ namespace CityTransport.Controllers
                 Role = user.Role,
                 City = user.City,
                 CardNumber = card.CardNumber
-                // CardNumber = user.CardNumber
+                
 
             };
 
@@ -213,7 +213,7 @@ namespace CityTransport.Controllers
         {
             var user = this.usersService.GetAllUsers().FirstOrDefault(x => x.Id == GetCurrentUserId());
             var card = this.cardService
-             .GetAllCards().FirstOrDefault(c => c.UserId == user.Id); //service should be witten again
+             .GetAllCards().FirstOrDefault(c => c.UserId == user.Id);
             if (this.ModelState.IsValid)
             {
                 user.FirstName = model.FirstName;
@@ -221,11 +221,9 @@ namespace CityTransport.Controllers
                 user.Email = model.Email;
                 user.Gender = model.Gender;
                 user.Role = model.Role;
-                // user.CardNumber = model.CardNumber;
                 user.City = model.City;
-
                 card.CardNumber = model.CardNumber;
-                // card.UserID = user.Id;
+               
 
                 this.usersService.Edit(user);
                 this.cardService.Edit(card);
@@ -233,6 +231,54 @@ namespace CityTransport.Controllers
 
             return this.RedirectToAction("ParentUserHomePage", "Parents");
         }
+        public IActionResult ParentChildrenInfo(ParentChildrenInfoModel model)
+        {
+            string userId = GetCurrentUserId();
+            var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
+            // var parent = this.parentService.GetAllParents().FirstOrDefault(p => p.UserId == userId);
+            ParentChildrenInfoModel inputModel = new ParentChildrenInfoModel()
+            {
+
+                FirstName = model.FirstName,
+                LastName = model.LastName,
+                UserId = user.Id
+
+            };
+
+
+            var children = new List<Parent>();
+            if (model != null)
+            {
+                bool UserId = !String.IsNullOrEmpty(inputModel.UserId);
+                children = parentService.GetAllParents().ToList();
+                if (UserId)
+                    children = children.Where(u => u.UserId == inputModel.UserId).ToList();
+
+            }
+            if (children == null)
+            {
+                return View(inputModel);
+            }
+            else
+            {
+                //var invoices = this.myInvoicesService.GetAllInvoices().FirstOrDefault(i => i.UserId == user.Id);
+                //var parent = this.parentService.GetAllParents().FirstOrDefault(p => p.UserId == userId);//Finding the record for current user
+                //var children = this.cardService.GetAllCards().FirstOrDefault(c => c.CardNumber == parent.ChildrenCardNumber);//Finding ChildrenCardNumber in Card Table
+                //var names = this.usersService.GetAllUsers().FirstOrDefault(n => n.Id == children.UserId);
+
+                return View(new ParentChildrenInfoModel()
+                {
+                    ChildrenFirstName = model.ChildrenFirstName,
+                    ChildrenLastName = model.ChildrenLastName,
+                    CardNumber = model.ChildrenCardNumber,
+                    ParenChildrenList = children
+
+                    
+                });
+
+            }
+        }
+    
 
         //===============for QR code generator=============================
         private static Byte[] BitmapToBytes(Bitmap img)
@@ -247,7 +293,7 @@ namespace CityTransport.Controllers
 
 
         }
-
+        
         public IActionResult ParentMyCard()
         {
             return View();
@@ -266,6 +312,7 @@ namespace CityTransport.Controllers
             Bitmap qrCodeImage = qrCode.GetGraphic(10);
             return View(BitmapToBytes(qrCodeImage));
         }
+        
         public IActionResult ParentMyInvoices(ParentMyInvoicesModel model)
         {
             string userId = GetCurrentUserId();
@@ -635,6 +682,7 @@ namespace CityTransport.Controllers
             var children = this.cardService.GetAllCards().FirstOrDefault(c => c.CardNumber == parent.ChildrenCardNumber);//Finding ChildrenCardNumber in Card Table
             var names = this.usersService.GetAllUsers().FirstOrDefault(n => n.Id == children.UserId);
             var childrenOrder = this.orderService.GetAllOrders().FirstOrDefault(cho => cho.UserId == children.UserId);
+            var childenCard = this.cardService.GetAllCards().FirstOrDefault(chc => chc.UserId == children.UserId);
 
             if (user.SpecialOfferId == 113)
             {
@@ -685,20 +733,35 @@ namespace CityTransport.Controllers
             }
             if (this.ModelState.IsValid)
             {
+                if (user.SpecialOfferId == 113)
+                { 
+                    
+                    card.StartDate = DateTime.Today;
+                    card.EndDate = DateTime.Today.AddMonths(order.Duration);
 
-                card.StartDate = DateTime.Today;
+                    childenCard.StartDate = DateTime.Today;
+                    childenCard.EndDate = DateTime.Today.AddMonths(order.Duration);
+
+                    this.cardService.Edit(card);
+                    this.cardService.Edit(childenCard);
+                    this.orderService.Delete(order);
+                    this.orderService.Delete(childrenOrder);
+
+                } else
+
+                    card.StartDate = DateTime.Today;
                 card.EndDate = DateTime.Today.AddMonths(order.Duration);
 
 
-
+                
                 this.cardService.Edit(card);
                 this.orderService.Delete(order);
-                this.orderService.Delete(childrenOrder);
+               
 
                 return this.RedirectToAction("ParentUserHomePage", "Parents");
             }
 
-
+            ViewData["Error"] = "Your Payment was not Successfull!";
             return View(model);
         }
     }

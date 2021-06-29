@@ -68,6 +68,13 @@
                 <span asp-validation-for="@Model.LastName" class="text-danger"></span>
 
                 <div class="drop-down">
+                    <p class="label-name">City:</p>
+                    <select asp-for="@Model.City" class="select-css">
+                        <option value="">City Name</option>
+                        <option value="Sofia">Sofia</option>
+                        <option value="Varna">Varna</option>
+                        <option value="Burgas">Burgas</option>
+                    </select>
                     <p class="label-name">Gender:</p>
                     <select asp-for="@Model.Gender" value=@Model.Gender class="select-css">
                         <option value="">Gender</option>

@@ -8,8 +8,8 @@
     <link rel="shortcut icon" href="~/frontEnd/images/tram.png" />
     <title>City Transport-Parent View Children</title>
     <!--CSS files-->
-    <link rel="stylesheet" href="~/frontEnd/css/main.css">
-    <link rel="stylesheet" href="~/frontEnd/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/../frontEnd/css/parent-main.css">
+    <link rel="stylesheet" href="~/../frontEnd/css/bootstrap.min.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -23,7 +23,7 @@
         <div class="container">
             <!--Logo-->
             <a class="navbar-brand" href="ParentUserHomePage">
-                <div style="padding-left: 20px;"><img src="~/frontEnd/images/tram_user.png" alt="Logo" width="70" height="67"></div><div style="padding-top: 10px;">City Transport</div>
+                <div style="padding-left: 20px;"><img src="~/frontEnd/images/tram_green.png" alt="Logo" width="70" height="67"></div><div style="padding-top: 10px;">City Transport</div>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="UserHomePage">
+                        <a class="nav-link" href="ParentUserHomePage">
                             My Profile
                         </a>
                     </li>
@@ -41,8 +41,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="ParentMyInvoices">My Invoices</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a class="nav-link" href="ParentMyCard">My Card</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ParentChildrenCard">Children Card</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-area="Identity" asp-page="/Account/Logout">Log Out</a>
