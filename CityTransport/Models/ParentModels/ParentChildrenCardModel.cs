@@ -8,8 +8,10 @@ namespace CityTransport.Models.ParentModels
 {
     public class ParentChildrenCardModel
     {
+       
         public User User { get; set; }
         public Card Card { get; set; }
+        public Children Children { get; set; }
         public Parent Parent { get; set; }
         public string UserId { get; set; }
         public string FirstName { get; set; }

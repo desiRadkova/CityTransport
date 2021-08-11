@@ -83,7 +83,13 @@ namespace CityTransport.Areas.Identity.Pages.Account
                         _logger.LogInformation("Parent logged in.");
                         return LocalRedirect("~/Parents/ParentUserHomePage");
                     }
-                    else if (user.Role != "Parent")
+                    else if (user.Role != "Parent" && user.Role == "Admin")
+                    {
+                        _logger.LogInformation("User logged in.");
+                        return LocalRedirect("~/Admin/AdminHomePage");
+
+                    }
+                    else if(user.Role != "Parent")
                     {
                         _logger.LogInformation("User logged in.");
                         return LocalRedirect("~/Users/UserHomePage");

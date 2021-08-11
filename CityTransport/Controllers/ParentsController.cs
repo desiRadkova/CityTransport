@@ -27,6 +27,7 @@ namespace CityTransport.Controllers
         private readonly IMyInvoicesService myInvoicesService;
         private readonly IOrderService orderService;
         private readonly IParentService parentService;
+        private readonly IChildrenService childrenService;
         private readonly UserManager<User> userManager;
         private readonly IMapper mapper;
 
@@ -37,6 +38,7 @@ namespace CityTransport.Controllers
            IMyInvoicesService myInvoicesService,
            IOrderService orderService,
            IParentService parentService,
+           IChildrenService childrenService,
            IHttpContextAccessor httpContextAccessor,
            IMapper mapper,
             UserManager<User> userManager)
@@ -47,6 +49,7 @@ namespace CityTransport.Controllers
             this.myInvoicesService = myInvoicesService;
             this.orderService = orderService;
             this.parentService = parentService;
+            this.childrenService = childrenService;
             this.httpaccessor = httpContextAccessor;
             this.mapper = mapper;
             this.userManager = userManager;
@@ -438,21 +441,19 @@ namespace CityTransport.Controllers
 
             return View(model);
         }
-        public IActionResult ParentChildrenCard(string returnUrl = null)
+  public IActionResult ParentChildrenCard(string returnUrl = null)
         {
             string userId = GetCurrentUserId();
             var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
-            var children = this.parentService.GetAllParents().FirstOrDefault(c => c.UserId == userId);
-          
+            var children = this.childrenService.GetAllParents().FirstOrDefault(ch => ch.UserId == userId);
+            var viewModel = new ParentChildrenCardModel()
+            {
+                Children = new Children()
 
-           
-                var viewModel = new ParentChildrenCardModel()
-                {
 
-                    Parent = new Parent()
+            };
 
-                };
-          
+
             return View(viewModel);
         }
         [HttpPost]
@@ -484,9 +485,10 @@ namespace CityTransport.Controllers
 
             if (children.Count() < 2)
             {
+
                 if (this.ModelState.IsValid)
                 {
-                    var Parent = new Parent()
+                    var Children = new Children()
                     {
                         UserId = GetCurrentUserId(),
                         ChildrenCardNumber = model.ChildrenCardNumber,
@@ -494,11 +496,12 @@ namespace CityTransport.Controllers
                         ChildrenLastName = "Dimov"
                     };
 
-                    parentService.Add(Parent);
+                    childrenService.Add(Children);
                     //TempData["Success"] = "You've successfully added your children!";
 
                     return this.RedirectToAction("ParentViewChildren", "Parents");
                 }
+
             }
             ViewData["Error"] = "You've already added two children!";
 
@@ -508,24 +511,53 @@ namespace CityTransport.Controllers
         {
             string userId = GetCurrentUserId();
             var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
-            var parent = this.parentService.GetAllParents().FirstOrDefault(p => p.UserId == userId);//Finding the record for current user
-            var children = this.cardService.GetAllCards().FirstOrDefault(c => c.CardNumber == parent.ChildrenCardNumber);//Finding ChildrenCardNumber in Card Table
-            var names = this.usersService.GetAllUsers().FirstOrDefault(n => n.Id == children.UserId);
+            var parent = this.parentService.GetAllParents().FirstOrDefault(p => p.UserId == userId);//Finding the record for current user Gets the first record
+            var children = this.childrenService.GetAllParents().FirstOrDefault(ch => ch.UserId == userId);
+            var childrenUser = this.cardService.GetAllCards().FirstOrDefault(c => c.CardNumber == children.ChildrenCardNumber);//Finding ChildrenCardNumber in Card Table
+            var names = this.usersService.GetAllUsers().FirstOrDefault(n => n.Id == childrenUser.UserId);
+            var viewModel = new ParentViewChildrenModel()
+            {
+                ChildrenFirstName = children.ChildrenFirstName = names.FirstName,
+                ChildrenLastName = children.ChildrenLastName = names.LastName,
+                ChildrenId = children.ChildrenId = childrenUser.UserId,
+                ChildrenCardNumber = children.ChildrenCardNumber
+            };
+            this.childrenService.Edit(children);
+
+            return View(viewModel);
+        }
+        [HttpPost]
+        public IActionResult ParentViewChildren()
+        {
+            string userId = GetCurrentUserId();
+            var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
+            var parent = this.parentService.GetAllParents().FirstOrDefault(p => p.UserId == userId);//Finding the record for current user Gets the first record
+            var children = this.childrenService.GetAllParents().FirstOrDefault(ch => ch.UserId == userId);
+            var childrenUser = this.cardService.GetAllCards().FirstOrDefault(c => c.CardNumber == children.ChildrenCardNumber);//Finding ChildrenCardNumber in Card Table
+            var names = this.usersService.GetAllUsers().FirstOrDefault(n => n.Id == childrenUser.UserId);
+          
 
             
-                var viewModel = new ParentViewChildrenModel()
+               
+            // childrenService.Edit(children);
+           
+                var Parent = new Parent
                 {
-
-                    ChildrenFirstName = parent.ChildrenFirstName = names.FirstName,
-                    ChildrenLastName = parent.ChildrenLastName = names.LastName,
-                    ChildrenId = parent.ChildrenId = children.UserId,
-                    ChildrenCardNumber = parent.ChildrenCardNumber
-
+                    UserId = GetCurrentUserId(),
+                    ChildrenFirstName = children.ChildrenFirstName,
+                    ChildrenLastName = children.ChildrenLastName,
+                    ChildrenId = children.ChildrenId,
+                    ChildrenCardNumber = children.ChildrenCardNumber
 
                 };
-                parentService.Edit(parent);
+                parentService.Add(Parent);
+
+                this.childrenService.Delete(children);
+
+
+                return this.RedirectToAction("ParentUserHomePage", "Parents");
             
-            return View(viewModel);
+            //return View(viewModel);
 
            
         }

@@ -66,7 +66,22 @@
             }
             @if (DateTime.Today == Model.NotificationDay.Date)
             {
-
+                <script>
+                    $(document).ready(function () {
+                        alert('Your Card is going to Expire in three days!');
+                    });
+                </script>
+            }
+            @if (DateTime.Today == Model.NotificationTwoDay.Date)
+            {
+                <script>
+                    $(document).ready(function () {
+                        alert('Your Card is going to Expire in two days!');
+                    });
+                </script>
+            }
+            @if (DateTime.Today == Model.NotificationThreeDay)
+            {
                 <script>
                     $(document).ready(function () {
                         alert('Your Card is going to Expire in three days!');
@@ -89,13 +104,13 @@
                 <p class="label-name">Email</p> <h4 class="label-detail">@Html.DisplayFor(model => model.Email)</h4>
             </div>
             <div class="gender-info">
-               
-                </div>
-                <br>
 
-                <a class="button" href="ChargeCard">Charge Card</a></br></br>
-                <a class="button" href="ChangeInformation">Change Information</a></br>
             </div>
+            <br>
+
+            <a class="button" href="ChargeCard">Charge Card</a></br></br>
+            <a class="button" href="ChangeInformation">Change Information</a></br>
+        </div>
         </div>
 
     <!--JavaScript files-->

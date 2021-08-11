@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Admin\AddSpecialOffer.cshtml" />
+    <Content Remove="Views\Admin\AdminHomePage.cshtml" />
+    <Content Remove="Views\Admin\DeleteChildren.cshtml" />
+    <Content Remove="Views\Admin\DeleteUser.cshtml" />
+    <Content Remove="Views\Admin\ViewChildren.cshtml" />
     <Content Remove="Views\Parents\ParentAddCard.cshtml" />
     <Content Remove="Views\Parents\ParentChangeInformation.cshtml" />
     <Content Remove="Views\Parents\ParentChargeCard.cshtml" />
@@ -42,6 +47,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\Admin\AddSpecialOffer.cshtml" />
+    <None Include="Views\Admin\ViewChildren.cshtml" />
+    <None Include="Views\Admin\DeleteUser.cshtml" />
+    <None Include="Views\Admin\DeleteChildren.cshtml" />
+    <None Include="Views\Admin\AdminHomePage.cshtml" />
     <None Include="Views\Parents\ParentAddCard.cshtml" />
     <None Include="Views\Parents\ParentChangeInformation.cshtml" />
     <None Include="Views\Parents\ParentChargeCard.cshtml" />
@@ -72,7 +82,6 @@
 
   <ItemGroup>
     <Folder Include="Areas\Identity\Services\" />
-    <Folder Include="Views\Admin\" />
   </ItemGroup>
 
 </Project>

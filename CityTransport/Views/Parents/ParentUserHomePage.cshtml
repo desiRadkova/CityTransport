@@ -75,6 +75,22 @@
                     });
                 </script>
             }
+            @if (DateTime.Today == Model.NotificationTwoDay.Date)
+            {
+                <script>
+                    $(document).ready(function () {
+                        alert('Your Card is going to Expire in two days!');
+                    });
+                </script>
+            }
+            @if (DateTime.Today == Model.NotificationThreeDay)
+            {
+                <script>
+                    $(document).ready(function () {
+                        alert('Your Card is going to Expire in three days!');
+                    });
+                </script>
+            }
             <h1>@Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</h1><br>
             <div class="role-info">
                 <p class="label-name">Role</p><h4 class="label-detail">@Html.DisplayFor(model => model.Role)</h4>

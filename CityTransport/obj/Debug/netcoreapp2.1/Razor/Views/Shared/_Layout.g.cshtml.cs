@@ -58,12 +58,12 @@ using CityTransport.Models;
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(25, 186, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "02c5f5d25b104f8bb75ba8bbaa47dffd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "62b6882f0bed4496a505f66f41b10b0f", async() => {
                 BeginContext(31, 114, true);
                 WriteLiteral("\r\n    <meta charset=\"utf-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    ");
                 EndContext();
                 BeginContext(145, 57, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "305cf341f5bf44e89410470a2c78fd52", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7cad251eda0d48808826a6eb403093b7", async() => {
                     BeginContext(180, 8, true);
                     WriteLiteral("\r\n\r\n    ");
                     EndContext();
@@ -100,12 +100,12 @@ using CityTransport.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(213, 123, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1486576057b0407580a87f77c1b9015b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af6d8f7c9b4348c9a33c8a8891c2e508", async() => {
                 BeginContext(219, 3, true);
                 WriteLiteral("\r\n\t");
                 EndContext();
                 BeginContext(222, 40, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "67cdde8bdfb04653b3cd436121a6fc2e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "1c43cd29d27442fe99eb00ad73c91f73", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

@@ -22,6 +22,7 @@ namespace CityTransport.Data
         public new DbSet<Transport> Transport { get; set; }
         public new DbSet<MyInvoices> MyInvoices { get; set; }
         public new DbSet<Order> Orders { get; set; }
+        public new DbSet<Children> Childrens { get; set; }
 
 
     }

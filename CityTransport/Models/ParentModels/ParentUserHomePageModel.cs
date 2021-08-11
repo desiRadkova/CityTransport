@@ -23,9 +23,17 @@ namespace CityTransport.Models.ParentModels
         public City CityName { get; set; }
         public Card Card { get; set; }
         public DateTime EndDate { get; set; }
-        public DateTime NotificationDay
+        public DateTime NotificationThreeDay
         {
             get { return this.EndDate.AddDays(-3); }
+        }
+        public DateTime NotificationTwoDay
+        {
+            get { return this.EndDate.AddDays(-2); }
+        }
+        public DateTime NotificationDay
+        {
+            get { return this.EndDate.AddDays(-1); }
         }
     }
 }

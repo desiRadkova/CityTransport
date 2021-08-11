@@ -77,10 +77,10 @@
                                                   <div class="drop-down">
 
 
-                                                      <!--<p class="label-name">Special Offer:@@ Model.SpecialOffers.OfferName@@</p><br>-->
-                                                      <!-- <p class="label-name">Price:@@ Model.SpecialOffers.OfferPrice @@BGN</p><br /><br />-->
+                                                      <p class="label-name">Special Offer: @Model.SpecialOffers.OfferName</p><br>
+                                                      <p class="label-name">Price: @Model.SpecialOffers.OfferPrice BGN</p><br /><br />
                                                       <!--This button is for better UX-->
-                                                      <button class="button">Select</button>
+                                                     
                                                   </div>
                                               </form> }
                                           else
@@ -93,14 +93,7 @@
 
                                                   <p class="label-name">Start Date: @Model.StartDate.ToShortDateString() /  End Date: @Model.EndDate.ToShortDateString()</p><br>
                                                   <p class="label-name">Price: @Model.StandartPrice BGN</p><br><br>
-                                                  <div class="drop-down">
-
-
-                                                      <!-- <p class="label-name">Special Offer:@@ Model.SpecialOffers.OfferName@@</p><br>-->
-                                                      <!-- <p class="label-name">Price:@@ Model.SpecialOffers.OfferPrice @@BGN</p><br /><br />-->
-                                                      <!--This button is for better UX-->
-                                                      <button class="button">Select</button>
-                                                  </div>
+                                              
                                               </form>
                                           }
 

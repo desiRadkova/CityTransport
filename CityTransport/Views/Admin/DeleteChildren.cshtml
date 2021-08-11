@@ -1,0 +1,77 @@
+@model CityTransport.Models.AdminModels.DeleteChildrenModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="shortcut icon" href="~/frontEnd/images/tram.png" />
+    <title>Delete Children</title>
+    <!--CSS and other files-->
+    <link rel="stylesheet" href="~/frontEnd/css/admin-main.css">
+    <link rel="stylesheet" href="~/frontEnd/css/bootstrap.min.css">
+    <script type='text/javascript' src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!--Background Image-->
+    <div style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url('../../frontEnd/images/white_background.jpg') center center no-repeat; background-size: cover;"></div>
+    <!-- Navigation -->
+    <!--Container-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <!--Logo-->
+            <a class="navbar-brand" href="UserHomePage">
+                <div style="padding-left: 20px;"><img src="~/frontEnd/images/blackTram.png" alt="Logo" width="70" height="67"></div><div style="padding-top: 10px;">City Transport</div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Logout">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-user-info">
+        <!--User Container-->
+        <div class="user-info">
+            <br>
+            <h1>Delete Children</h1><br>
+            <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="get">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <p class="label-name">First Name:</p><br>
+                <input asp-for="@Model.ChildrenFirstName" type="text" value=@Model.ChildrenFirstName class="input" placeholder="@Html.DisplayFor(model => model.ChildrenFirstName)" /><br>
+                <span asp-validation-for="@Model.ChildrenFirstName" class="text-danger"></span><br>
+                <p class="label-name">Last Name:</p><br>
+                <input asp-for="@Model.ChildrenLastName" type="text" value=@Model.ChildrenLastName class="input" placeholder="@Html.DisplayFor(model => model.ChildrenLastName)" /><br><br>
+                <span asp-validation-for="@Model.ChildrenLastName" class="text-danger"></span>
+
+                <br><br>
+
+                <div class="drop-down">
+                    <button class="button" type="submit">Search</button>
+                </div>
+            </form>
+            <br><br>
+            @foreach (var children in Model.ParenChildrenList)
+            {
+                <p class="invoice">First Name: @children.ChildrenFirstName</p> <p class="invoice">Card Number: @children.ChildrenCardNumber</p><br>
+                <p class="invoice">First Name: @children.ChildrenLastName</p><br><br> <a href="/Admin/ViewChildren/@children.ChildrenId"><div class="drop-down"><button class="button">Remove</button></div></a><br>
+    <div class="drop-down"> <hr class="invoice-line"></div><br>
+
+    }
+</div>
+    </div>
+
+    <!--JavaScript files-->
+    
+
+    <script type="text/javascript" src="~/frontEnd/javaScript/jquery.slim.js"></script>
+    <script type="text/javascript" src="~/frontEnd/javaScript/bootstrap.bundle.min.js"></script>
+</body>
+</html>

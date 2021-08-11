@@ -34,5 +34,10 @@ namespace CityTransport.Services
         {
             return specialOffersRepo.GetAll();
         }
+        public void Add(SpecialOffers offer)
+        {
+            specialOffersRepo.Add(offer);
+            specialOffersRepo.Save();
+        }
     }
 }

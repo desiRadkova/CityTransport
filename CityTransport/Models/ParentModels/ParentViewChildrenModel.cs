@@ -10,6 +10,7 @@ namespace CityTransport.Models.ParentModels
     {
         public User User { get; set; }
         public string UserId { get; set; }
+        public Children Children { get; set; }
         public Parent Parent { get; set; }
         public string ChildrenFirstName { get; set; }
         public string ChildrenLastName { get; set; }

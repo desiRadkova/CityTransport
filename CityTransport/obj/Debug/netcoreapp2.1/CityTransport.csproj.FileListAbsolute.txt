@@ -47,7 +47,6 @@ D:\diplomnaRabota\CityTransport\CityTransport\CityTransport\bin\Debug\netcoreapp
 D:\diplomnaRabota\CityTransport\CityTransport\CityTransport\bin\Debug\netcoreapp2.1\CityTransport.pdb
 D:\diplomnaRabota\CityTransport\CityTransport\CityTransport\bin\Debug\netcoreapp2.1\CityTransport.Views.dll
 D:\diplomnaRabota\CityTransport\CityTransport\CityTransport\bin\Debug\netcoreapp2.1\CityTransport.Views.pdb
-D:\diplomnaRabota\CityTransport\CityTransport\CityTransport\obj\Debug\netcoreapp2.1\CityTransport.csprojAssemblyReference.cache
 D:\diplomnaRabota\CityTransport\CityTransport\CityTransport\obj\Debug\netcoreapp2.1\CityTransport.csproj.CoreCompileInputs.cache
 D:\diplomnaRabota\CityTransport\CityTransport\CityTransport\obj\Debug\netcoreapp2.1\CityTransport.RazorAssemblyInfo.cache
 D:\diplomnaRabota\CityTransport\CityTransport\CityTransport\obj\Debug\netcoreapp2.1\CityTransport.RazorAssemblyInfo.cs
@@ -81,3 +80,4 @@ D:\diplomnaRabota\CityTransport\CityTransport\CityTransport\obj\Debug\netcoreapp
 D:\diplomnaRabota\CityTransport\CityTransport\CityTransport\obj\Debug\netcoreapp2.1\CityTransport.dll
 D:\diplomnaRabota\CityTransport\CityTransport\CityTransport\obj\Debug\netcoreapp2.1\CityTransport.pdb
 D:\diplomnaRabota\CityTransport\CityTransport\CityTransport\obj\Debug\netcoreapp2.1\CityTransport.csproj.CopyComplete
+D:\diplomnaRabota\CityTransport\CityTransport\CityTransport\obj\Debug\netcoreapp2.1\CityTransport.csprojAssemblyReference.cache

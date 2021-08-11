@@ -359,26 +359,7 @@ namespace DataSeed
             context.MyInvoices.AddRange(myInvoices);
             context.SaveChanges();
         }
-        private void SeedOrders()
-        {
-            Console.WriteLine("Adding Orders...");
-            List<Dbmodel.User> users = context.Users.Where
-              (u => u.Id != null).ToList();
-            List<Dbmodel.Order> order = new List<Dbmodel.Order>() {
-            new Dbmodel.Order
-            {
-                 User = users.FirstOrDefault(u => u.Email == "peter@gmail.com"),
-               TransportKind = "One Kind",
-               StandartPrice = 20,
-               TransportType ="Tram",
-               TransportNumber = "5",
-               StartDate = DateTime.Now,
-               EndDate = DateTime.Now.AddMonths(1)
-            }, };
-
-            context.Orders.AddRange(order);
-            context.SaveChanges();
-        }
+       
 
     }
 }

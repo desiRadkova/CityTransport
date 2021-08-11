@@ -77,6 +77,7 @@ namespace CityTransport
             services.AddScoped<IMyInvoicesService, MyInvoicesService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IParentService, ParentService>();
+            services.AddScoped<IChildrenService, ChildrenService>();
 
             services.AddAutoMapper();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);

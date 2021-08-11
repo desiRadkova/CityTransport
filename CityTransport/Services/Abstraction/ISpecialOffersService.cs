@@ -11,6 +11,7 @@ namespace CityTransport.Services.Abstraction
         SpecialOffers GetOffersById(string offerId);
         SpecialOffers GetOffersByRole(string userRole);
         IEnumerable<SpecialOffers> GetAllOffers();
-        
+        void Add(SpecialOffers offer);
+
     }
 }

@@ -1,0 +1,360 @@
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+a:link {
+    text-decoration: none;
+}
+
+
+/*-----------Select DropDown Menu----------------*/
+.select-css {
+    display: block;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #444;
+    line-height: 1.3;
+    padding: .6em 1.4em .5em .8em;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: url("../images/arrow.png");
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+
+    .select-css::-ms-expand {
+        display: none;
+    }
+
+    .select-css:hover {
+        border-color: #888;
+    }
+
+    .select-css:focus {
+        border-color: #aaa;
+        box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+        box-shadow: 0 0 0 3px -moz-mac-focusring;
+        color: #222;
+        outline: none;
+    }
+
+    .select-css option {
+        font-weight: normal;
+    }
+
+input:focus::placeholder {
+    color: transparent;
+}
+/*---------------Log in Form-------------*/
+.login-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    opacity: 0.9;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+    .form input {
+        font-family: "Roboto", sans-serif;
+        outline: 0;
+        background: #f2f2f2;
+        width: 100%;
+        border: 0;
+        margin: 0 0 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    .form .button {
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        outline: 0;
+        background: #000000;
+        width: 100%;
+        border: 0;
+        padding: 12px 115px;
+        color: #FFFFFF;
+        font-size: 14px;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+    }
+
+        .form .button:hover, .form button:active, .form button:focus {
+            background: #0064ED;
+        }
+/*----------------My Card-----------------*/
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+    .overlay:target {
+        visibility: visible;
+        opacity: 1;
+    }
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #E8E8E8;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+    .popup h2 {
+        margin-top: 0;
+        color: #000;
+        font-family: Tahoma, Arial, sans-serif;
+    }
+
+    .popup .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+    }
+
+        .popup .close:hover {
+            color: #000;
+        }
+
+    .popup .content {
+        max-height: 30%;
+        overflow: auto;
+    }
+
+@media screen and (max-width: 700px) {
+    .box {
+        width: 70%;
+    }
+
+    .popup {
+        width: 70%;
+    }
+}
+/*---------------My Invoice--------------*/
+.invoice {
+    margin-right: 90px;
+    padding-left: 30%;
+    float: left;
+}
+
+.invoice-line {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(207, 224, 237, 1), rgba(0, 0, 0, 0));
+    width: 60%;
+}
+
+.invoice-label {
+    width: 20%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 142, 247, 1), rgba(0, 0, 0, 0));
+}
+/*---------------Payment Method---------*/
+.payment-card {
+    border: 2px solid rgba(0, 142, 247, 0.1);
+    border-radius: 25px;
+    width: 60%;
+    display: inline-block;
+}
+
+/*--------------Special Offers----------*/
+.offer-name {
+    margin-right: 80px;
+    padding-left: 20%;
+    float: left;
+}
+/*-----------Change Information------------*/
+
+.drop-down {
+    display: inline-block;
+    width: 230px;
+    text-align: center;
+}
+
+.input:focus {
+    outline: none !important;
+    border: 1px solid #000000;
+    box-shadow: 0 0 10px #719ECE;
+}
+/*--------User Home Page-----------*/
+
+.user-info {
+    text-align: center;
+    width: 100%;
+}
+
+    .user-info p {
+        font-family: Verdana, sans-serif;
+        font-size: 20px;
+        display: inline;
+        //inline preebva neshata font-weight: bold;
+    }
+
+    .user-info h4 {
+        display: inline;
+        font-weight: normal;
+        margin-left: 10%;
+    }
+
+.role-info {
+    display: inline-block;
+    position: relative;
+    width: 60%;
+    float: center;
+}
+
+.city-info {
+    display: inline-block;
+    position: relative;
+    width: 60%;
+    float: center;
+}
+
+.gender-info {
+    display: inline-block;
+    position: relative;
+    width: 60%;
+    float: center;
+}
+
+.email-info {
+    display: inline-block;
+    position: relative;
+    width: 60%;
+    padding: 0 0 0 8%;
+    float: center;
+    margin-bottom: 5%;
+}
+
+
+
+.button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #000000;
+    width: 100%;
+    border: 0;
+    padding: 12px 60px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+    .button:hover, .form button:active, .form button:focus {
+        background: #0064ED;
+        text-decoration: none;
+        color: #ffffff;
+    }
+/*-------------Login----------*/
+.label-name {
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+}
+
+.form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+    .form .message a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+.form .register-form {
+    display: none;
+}
+/*Container*/
+.container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    background-size: contain;
+}
+
+.container-user-info {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    background-size: contain;
+}
+
+.container:before, .container:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.container .info {
+    margin: 50px auto;
+    text-align: center;
+}
+
+    .container .info h1 {
+        margin: 0 0 15px;
+        padding: 0;
+        font-size: 36px;
+        font-weight: 300;
+        color: #1a1a1a;
+    }
+
+    .container .info span {
+        color: #4d4d4d;
+        font-size: 12px;
+    }
+
+        .container .info span a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .container .info span .fa {
+            color: #EF3B3A;
+        }
+/*-----------------Menu Active--------------------*/
+.active {
+    padding: 0 0 0px 0;
+    border-bottom: 2px solid #000000;
+}
+

@@ -44,6 +44,29 @@ namespace CityTransport.Migrations
                     b.ToTable("Cards");
                 });
 
+            modelBuilder.Entity("CityTransport.Data.Models.Children", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ChildrenCardNumber");
+
+                    b.Property<string>("ChildrenFirstName");
+
+                    b.Property<string>("ChildrenId");
+
+                    b.Property<string>("ChildrenLastName");
+
+                    b.Property<string>("UserId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Childrens");
+                });
+
             modelBuilder.Entity("CityTransport.Data.Models.City", b =>
                 {
                     b.Property<int>("Id")
@@ -406,6 +429,13 @@ namespace CityTransport.Migrations
                     b.HasOne("CityTransport.Data.Models.User", "User")
                         .WithOne("Card")
                         .HasForeignKey("CityTransport.Data.Models.Card", "UserId");
+                });
+
+            modelBuilder.Entity("CityTransport.Data.Models.Children", b =>
+                {
+                    b.HasOne("CityTransport.Data.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("CityTransport.Data.Models.MyInvoices", b =>
