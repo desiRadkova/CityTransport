@@ -15,6 +15,8 @@ using CityTransport.Services;
 using System.IO;
 using System.Drawing;
 using QRCoder;
+using MimeKit;
+using MailKit;
 
 namespace CityTransport.Controllers
 {
@@ -79,6 +81,45 @@ namespace CityTransport.Controllers
                 City = user.City
 
             };
+
+            //Sending email notification
+            //==============================================================
+            if (card.EndDate.AddDays(-3) == DateTime.Today)
+            {
+                var message = new MimeMessage();
+
+                message.From.Add(new MailboxAddress("City Transport", "citytransportfinalproject@gmail.com"));
+
+                message.To.Add(new MailboxAddress("", user.Email));
+
+                message.Subject = "Transport Card Expire";
+
+                message.Body = new TextPart("plain")
+                {
+                    Text = "Hi " + user.FirstName + " " + user.LastName + ", " +
+                    "\n\n" +
+                    "Your card for city transport will expire in three days!" +
+                    "\n\n" +
+                    "Regards," +
+                    "\n" +
+                    "City Transport"
+                };
+
+
+                using (var client = new MailKit.Net.Smtp.SmtpClient(new ProtocolLogger("smtp.log")))
+                {
+
+                    client.ServerCertificateValidationCallback = (s, c, h, e) => true;
+
+                    client.Connect("smtp.gmail.com", 587, false);
+
+                    client.Authenticate("citytransportfinalproject@gmail.com", "CityTransport1@");
+
+                    client.Send(message);
+
+                    client.Disconnect(true);
+                }
+            }
             return View(viewModel);
         }
 

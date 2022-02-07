@@ -1,4 +1,6 @@
 @model CityTransport.Models.UserModels.PaymentMethodPageModel
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,52 +58,52 @@
         <div class="user-info">
             <br>
             <h1>Paymet Method</h1><br>
-                                  <form  method="post">
-                                      
-                                      <div class="role-info">
+            <form method="post">
 
-                                          @if (Model.SpecialOfferId != null)
-                                          {
+                <div class="role-info">
 
-                                              <p class="offer-name">Your price is:</p><p>@Model.TotalOfferPrice BGN</p>
+                    @if (Model.SpecialOfferId != null)
+                    {
 
-                                          }
-                                          else
-                                          {
-                                              <p class="offer-name">Your price is:</p><p>@Model.TotalPrice BGN</p>
+                        <p class="offer-name">Your price is:</p><p>@Model.TotalOfferPrice BGN</p>
 
-                                          }
+                    }
+                    else
+                    {
+                        <p class="offer-name">Your price is:</p><p>@Model.TotalPrice BGN</p>
 
-
+                    }
 
 
-                                          <hr class="invoice-line">
-                                      </div>
-                                      <div class="payment-card">
-                                          <br>
-                                          <img src="~/frontEnd/images/master-card.png" alt="Master-Card" width="90" height="67"><img src="~/frontEnd/images/visa.png" alt="Master-Card" width="140" height="60">
-                                          <br><br>
-                                          <p class="label-name">First Name:</p><input class="input" asp-for="@Model.FirstName"  type="text" placeholder="@Model.FirstName" /><br>
-                                          <br>
-                                          <p class="label-name">Last Name:</p><input class="input" asp-for="@Model.LastName"  type="text" placeholder="@Model.LastName" /><br>
-                                         <br>
-                                          <p class="label-name">Card Number:</p><input class="input" type="text"  placeholder="0000 0000 0000 0000" /><br>
-                                          <span  class="text-danger"></span><br>
-                                          <p class="label-name">Expiration Date:</p><input class="input"  type="text" placeholder="20/03/21" /><br>
-                                          <br>
-                                          <p class="label-name">CV Code:</p><input class="input"  type="text" placeholder="000" /><br>
-                                          <br>
-                                          <br>
-                                      </div>
-                                      </br></br>
-                                      <div class="drop-down">
-                                          
-                                             
-                                              <button class="button" type="submit">Pay</button><br></br>
-                                          
-                                          </div>
-                                  </form>
-           
+
+
+                    <hr class="invoice-line">
+                </div>
+                <div class="payment-card">
+                    <br>
+                    <img src="~/frontEnd/images/master-card.png" alt="Master-Card" width="90" height="67"><img src="~/frontEnd/images/visa.png" alt="Master-Card" width="140" height="60">
+                    <br><br>
+                    <p class="label-name">First Name:</p><input class="input" asp-for="@Model.FirstName" type="text" placeholder="@Model.FirstName" /><br>
+                    <br>
+                    <p class="label-name">Last Name:</p><input class="input" asp-for="@Model.LastName" type="text" placeholder="@Model.LastName" /><br>
+                    <br>
+                    <p class="label-name">Card Number:</p><input class="input" type="text" placeholder="0000 0000 0000 0000" /><br>
+                    <span class="text-danger"></span><br>
+                    <p class="label-name">Expiration Date:</p><input class="input" type="text" placeholder="20/03/21" /><br>
+                    <br>
+                    <p class="label-name">CV Code:</p><input class="input" type="text" placeholder="000" /><br>
+                    <br>
+                    <br>
+                </div>
+                </br></br>
+                <div class="drop-down">
+
+
+                    <button class="button" type="submit">Pay</button><br></br>
+
+                </div>
+            </form>
+
         </div>
     </div>
 

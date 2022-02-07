@@ -55,24 +55,30 @@
         <div class="user-info">
             <br>
             <h1>Charge Card</h1><br>
-                                
-                                    <div class="drop-down">
+                               
+
+                                <div class="drop-down">
 
 
-                                        <p class="label-name">Transport Kind:</p><br>
-                                       <!-- <select asp-for="@@Model.TransportKind@@" class="select-css">
-                                            <option value="">Select Transport Kind</option>
-                                            <option value="All Kind">All Kind</option>
-                                            <option value="One Kind">One Kind</option>
-                                        </select>-->
-                                        @Html.DropDownList("url", new SelectList(new[]{
+                                    <p class="label-name">Transport Kind:</p><br>
+                                    <!-- <select asp-for="@@Model.TransportKind@@" class="select-css">
+         <option value="">Select Transport Kind</option>
+         <option value="All Kind">All Kind</option>
+         <option value="One Kind">One Kind</option>
+     </select>-->
+                                    @Html.DropDownList("url", new SelectList(new[]{
 new SelectListItem { Text = "All Kind", Value = Url.Action("ViewOrder", "Users") },
 new SelectListItem { Text = "One Kind", Value = Url.Action("ChargeCardOneKind", "Users") },}, "Value", "Text"),
 "Select Transport Kind", new { id = "urlId" })
 
-                                        <br>
-                                     
-                                    </div>
+                                    <br>
+                                    @if (ViewData["Error"] != null)
+                                    {
+                                        <div class="drop-down" style="color: #DB0400; ">
+                                            <p class="error"> @ViewData["Error"].ToString()</p>
+                                        </div>
+                                    }
+                                </div>
                                     
                               
 

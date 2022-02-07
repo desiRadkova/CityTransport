@@ -28,6 +28,7 @@
     <Content Remove="Views\Users\ChangeInformation.cshtml" />
     <Content Remove="Views\Users\ChargeCard.cshtml" />
     <Content Remove="Views\Users\ChargeCardOneKind.cshtml" />
+    <Content Remove="Views\Users\ChargeCardSame.cshtml" />
     <Content Remove="Views\Users\MyCard.cshtml" />
     <Content Remove="Views\Users\MyInvoices.cshtml" />
     <Content Remove="Views\Users\PaymentMethodPage.cshtml" />
@@ -40,6 +41,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="2.0.1" />
+    <PackageReference Include="MailKit" Version="3.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
@@ -67,6 +69,7 @@
     <None Include="Views\Parents\ParentViewChildren.cshtml" />
     <None Include="Views\Parents\ParentViewOrder.cshtml" />
     <None Include="Views\Users\ChangeInformation.cshtml" />
+    <None Include="Views\Users\ChargeCardSame.cshtml" />
     <None Include="Views\Users\ChargeCard.cshtml" />
     <None Include="Views\Users\ChargeCardOneKind.cshtml" />
     <None Include="Views\Users\ViewOrder.cshtml" />

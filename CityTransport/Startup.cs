@@ -18,6 +18,7 @@ using CityTransport.Services.Abstraction;
 using CityTransport.Services;
 using AutoMapper;
 using CityTransport.Data.Repository;
+using CityTransport.Data.Models;
 
 namespace CityTransport
 {
@@ -33,6 +34,11 @@ namespace CityTransport
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
+            {
+
+            }
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -78,6 +84,7 @@ namespace CityTransport
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IParentService, ParentService>();
             services.AddScoped<IChildrenService, ChildrenService>();
+          
 
             services.AddAutoMapper();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);

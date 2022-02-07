@@ -26,5 +26,10 @@ namespace CityTransport.Models.UserModels
             new SelectListItem { Value = "Three Months", Text = "Three Moths"},
             new SelectListItem { Value = "One Year", Text = "One Year"},
          };
+
+        public MyInvoices MyInvoices { get; set; }
+       
+        public Card Card { get; set; }
+    
     }
 }

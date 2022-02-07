@@ -16,6 +16,10 @@ using System.Drawing;
 using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using QRCoder;
+using MimeKit;
+using MailKit.Net.Smtp;
+using MailKit.Security;
+using MailKit;
 
 namespace CityTransport.Controllers
 {
@@ -80,6 +84,47 @@ namespace CityTransport.Controllers
                 City = user.City
 
             };
+
+            //Sending email notification
+            //==============================================================
+            if (card.EndDate.AddDays(-3) == DateTime.Today)
+            {
+                var message = new MimeMessage();
+
+                message.From.Add(new MailboxAddress("City Transport", "citytransportfinalproject@gmail.com"));
+
+                message.To.Add(new MailboxAddress("", user.Email));
+
+                message.Subject = "Transport Card Expire";
+
+               
+
+                message.Body = new TextPart("plain")
+                {
+                    Text = "Hi "+ user.FirstName + " " + user.LastName + ", " +
+                    "\n\n" +
+                    "Your card for city transport will expire in three days!" +
+                    "\n\n" +
+                    "Regards," +
+                    "\n"+
+                    "City Transport"
+                };
+
+             
+                using (var client = new MailKit.Net.Smtp.SmtpClient(new ProtocolLogger("smtp.log")))
+                {
+
+                    client.ServerCertificateValidationCallback = (s, c, h, e) => true;
+
+                    client.Connect("smtp.gmail.com", 587, false);
+
+                    client.Authenticate("citytransportfinalproject@gmail.com", "CityTransport1@");
+                    
+                    client.Send(message);
+                   
+                    client.Disconnect(true);
+                }
+            }
 
             return View(viewModel);
         }
@@ -363,22 +408,30 @@ namespace CityTransport.Controllers
             string userId = GetCurrentUserId();
             var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
             var order = this.orderService.GetAllOrders().FirstOrDefault(o => o.UserId == userId);
+            var card = this.cardService.GetAllCards().FirstOrDefault(c => c.UserId == userId);
 
-            if (order == null)//For All Kind Createing Order
+            if (card.StartDate != DateTime.Today)
             {
-                var Order = new Order
+                if (order == null)//For All Kind Createing Order
                 {
-                    TransportKind = "All Kind",
-                    UserId = GetCurrentUserId(),
-                    StartDate = DateTime.Today,
-                    EndDate = DateTime.Today,
-                    StandartPrice = 50
+                    var Order = new Order
+                    {
+                        TransportKind = "All Kind",
+                        UserId = GetCurrentUserId(),
+                        StartDate = DateTime.Today,
+                        EndDate = DateTime.Today,
+                        StandartPrice = 50
+
+                    };
+
+                    this.orderService.Add(Order);
 
                 };
 
-                this.orderService.Add(Order);
+            }
 
-            };
+            ViewData["Error"] = "You've already charched your card!";
+
             return View();
         }
         //[HttpGet]

@@ -22,6 +22,8 @@ namespace CityTransport.Models.UserModels
         public string City { get; set; }
         public Card Card { get; set; }
         public DateTime EndDate { get; set; }
+
+
         public DateTime NotificationThreeDay
         {
             get { return this.EndDate.AddDays(-3); }
