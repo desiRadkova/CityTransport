@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
             <!--Logo-->
-            <a class="navbar-brand" href="UserHomePage">
+            <a class="navbar-brand" asp-controller="Users" asp-action="UserHomePage">
                 <div style="padding-left: 20px;"><img src="~/frontEnd/images/tram_user.png" alt="Logo" width="70" height="67"></div><div style="padding-top: 10px;">City Transport</div>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,18 +31,18 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="UserHomePage">
+                        <a class="nav-link" asp-controller="Users" asp-action="UserHomePage" >
                             My Profile
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="SpecialOffers">Special Offers</a>
+                        <a class="nav-link" asp-controller="Users" asp-action="SpecialOffers" >Special Offers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="MyInvoices">My Invoices</a>
+                        <a class="nav-link"asp-controller="Users" asp-action="MyInvoices">My Invoices</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="MyCard">My Card</a>
+                        <a class="nav-link" asp-controller="Users" asp-action="MyCard">My Card</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-area="Identity" asp-page="/Account/Logout">Log Out</a>
@@ -68,19 +68,25 @@
                                               <p class="label-name">Transport Kind: @Model.TransportKind</p><br>
                                               <p class="label-name">Transport Type: @Model.TransportType</p><br>
                                               <p class="label-name">Transport Number: @Model.TransportNumber</p><br>
-                                              <p class="label-name">Start Date: @Model.StartDate.ToShortDateString() / End Date: @Model.EndDate.ToShortDateString()</p><br/>
+                                              <p class="label-name">Start Date: @Model.StartDate.ToShortDateString() / End Date: @Model.EndDate.ToShortDateString()</p><br />
                                               <p class="label-name">Special Offer Name:@Model.OfferName</p><br>
                                               <p class="label-name">Special Offer Price:@Model.OfferPrice BGN</p><br>
-                                              <p class="label-name">Total Price: @Model.StandartPrice BGN</p><br>
+                                              @if (Model.StandartPrice != 0)
+                                              {
+                                                  <p class="label-name">Total Price: @Model.StandartPrice BGN</p><br>
+                                              }
+                                              else
+                                              {
+                                                  <p class="label-name">Total Price: Free</p><br>
+                                              }
+                                                           <div class="drop-down">
 
-                                              <div class="drop-down">
 
-
-                                                  <!--<br>-->
-                                                  <!-- <p class="label-name">Price:@@ Model.SpecialOffers.OfferPrice @@BGN</p><br /><br />-->
-                                                  <!--This button is for better UX-->
-                                                  <button class="button">Select</button>
-                                              </div>
+                                                           <!--<br>-->
+                                                           <!-- <p class="label-name">Price:@@ Model.SpecialOffers.OfferPrice @@BGN</p><br /><br />-->
+                                                           <!--This button is for better UX-->
+                                                           <!-- <button class="button">Select</button> -->
+                                                           </div>
                                           </form> }
                                           else
                                           {
@@ -91,7 +97,14 @@
                                               <p class="label-name">Transport Kind: @Model.TransportKind</p><br>
 
                                               <p class="label-name">Start Date: @Model.StartDate.ToShortDateString() /  End Date: @Model.EndDate.ToShortDateString()</p><br>
-                                              <p class="label-name">Price: @Model.StandartPrice BGN</p><br><br>
+                                              @if (Model.StandartPrice != 0)
+                                              {
+                                                  <p class="label-name">Total Price: @Model.StandartPrice BGN</p><br><br>
+                                              }
+                                              else
+                                              {
+                                                  <p class="label-name">Total Price: Free</p><br><br>
+                                              }
                                               <div class="drop-down">
 
 

@@ -121,6 +121,27 @@ namespace CityTransport.Migrations
                     b.ToTable("MyInvoices");
                 });
 
+            modelBuilder.Entity("CityTransport.Data.Models.Notifications", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("EndDate");
+
+                    b.Property<string>("Message");
+
+                    b.Property<DateTime>("StartDate");
+
+                    b.Property<string>("TransportNumber");
+
+                    b.Property<string>("TransportType");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Notifications");
+                });
+
             modelBuilder.Entity("CityTransport.Data.Models.Order", b =>
                 {
                     b.Property<int>("Id")

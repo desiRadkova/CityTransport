@@ -10,6 +10,7 @@ namespace CityTransport.Models.UserModels
     public class AddCardModel
     {
         public User User { get; set; }
+        public SpecialOffers SpecialOffers { get; set; }
       
         public Card Card { get; set; }
         public int CardNumber { get; set; }

@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
             <!--Logo-->
-            <a class="navbar-brand" href="ParentUserHomePage">
+            <a class="navbar-brand" asp-controller="Parents" asp-action="ParentUserHomePage">
                 <div style="padding-left: 20px;"><img src="~/frontEnd/images/tram_green.png" alt="Logo" width="70" height="67"></div><div style="padding-top: 10px;">City Transport</div>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,21 +31,21 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="ParentUserHomePage">
+                        <a class="nav-link" asp-controller="Parents" asp-action="ParentUserHomePage">
                             My Profile
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ParentSpecialOffers">Special Offers</a>
+                        <a class="nav-link" asp-controller="Parents" asp-action="ParentSpecialOffers">Special Offers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ParentMyInvoices">My Invoices</a>
+                        <a class="nav-link" asp-controller="Parents" asp-action="ParentMyInvoices">My Invoices</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ParentMyCard">My Card</a>
+                        <a class="nav-link" asp-controller="Parents" asp-action="ParentMyCard">My Card</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ParentChildrenCard">Children Card</a>
+                        <a class="nav-link" asp-controller="Parents" asp-action="ParentChildrenCard">Children Card</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-area="Identity" asp-page="/Account/Logout">Log Out</a>

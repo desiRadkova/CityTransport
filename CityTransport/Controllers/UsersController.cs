@@ -66,6 +66,8 @@ namespace CityTransport.Controllers
             var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
             var card = this.cardService.GetAllCards().FirstOrDefault(c => c.UserId == userId);
 
+           
+
        if (card == null)
             {
                 return this.RedirectToAction("AddCard", "Users");
@@ -85,10 +87,12 @@ namespace CityTransport.Controllers
 
             };
 
+          
             //Sending email notification
             //==============================================================
             if (card.EndDate.AddDays(-3) == DateTime.Today)
             {
+                
                 var message = new MimeMessage();
 
                 message.From.Add(new MailboxAddress("City Transport", "citytransportfinalproject@gmail.com"));
@@ -409,9 +413,26 @@ namespace CityTransport.Controllers
             var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
             var order = this.orderService.GetAllOrders().FirstOrDefault(o => o.UserId == userId);
             var card = this.cardService.GetAllCards().FirstOrDefault(c => c.UserId == userId);
+            var myInvoice = this.myInvoicesService.GetAllInvoices().FirstOrDefault(i => i.UserId == userId);
 
-            if (card.StartDate != DateTime.Today)
+            //var viewModel = new ChargeCardModel()
+            //{
+            //    TransportKind = myInvoice.TransportKind,
+
+            //    // Order = new Order()
+
+            //};
+
+            if (card.StartDate != DateTime.Today || card.EndDate.AddDays(-3) != DateTime.Today)
             {
+                if(myInvoice.TransportKind == "All Kind")
+                {
+                    ViewData["InfoNotTextAll"] = "Last time you've been charged your card for All Kind Option now you can get 20% off if you select this option.";
+                }
+                else
+                {
+                    ViewData["InfoNotTextOne"] = "Last time you've been charged your card for One Kind Option now you can get 20% off if you select this option.";
+                }
                 if (order == null)//For All Kind Createing Order
                 {
                     var Order = new Order
@@ -421,16 +442,27 @@ namespace CityTransport.Controllers
                         StartDate = DateTime.Today,
                         EndDate = DateTime.Today,
                         StandartPrice = 50
-
+                        
                     };
-
+                   
+                   
                     this.orderService.Add(Order);
 
+                  
                 };
-
+               
             }
+            //if (myInvoice != null && order != null)
+            //    {
+            //        if (order.TransportKind == "All Kind" && myInvoice.TransportKind == "All Kind")
+            //        {
+            //            order.StandartPrice = 50 - (50 * 0.2);
+            //            this.orderService.Edit(order);
+            //        }
 
-            ViewData["Error"] = "You've already charched your card!";
+            //    }
+
+            ViewData["Error"] = "You've already Charged your card!";
 
             return View();
         }
@@ -458,6 +490,7 @@ namespace CityTransport.Controllers
             string userId = GetCurrentUserId();
             var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
             var order = this.orderService.GetAllOrders().FirstOrDefault(o => o.UserId == userId);
+            var myInvoice = this.myInvoicesService.GetAllInvoices().FirstOrDefault(i => i.UserId == userId);
 
             if (this.ModelState.IsValid)
             {
@@ -470,7 +503,13 @@ namespace CityTransport.Controllers
                 order.StartDate = DateTime.Today;
                 order.EndDate = DateTime.Today;
                 order.StandartPrice = 11;
-               // model.Order.Duration = 1;
+                // model.Order.Duration = 1;
+
+                if (myInvoice.TransportKind == "One Kind" && order.TransportKind == "One Kind")
+                {
+                    order.StandartPrice = 11 - 0.2;
+                }
+
                 this.orderService.Edit(order);
 
                
@@ -484,8 +523,17 @@ namespace CityTransport.Controllers
             var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
             var order = this.orderService.GetAllOrders().FirstOrDefault(o => o.UserId == userId);
             var offer = this.specialOffersService.GetAllOffers().FirstOrDefault(s => s.SpecialOffersID == user.SpecialOfferId);
+            var myInvoice = this.myInvoicesService.GetAllInvoices().FirstOrDefault(i => i.UserId == userId);
            
-            
+             if (myInvoice != null && order != null)
+            {
+                if (order.TransportKind == "All Kind" && myInvoice.TransportKind == "All Kind")
+                {
+                    order.StandartPrice = 50 - (50 * 0.2);
+                    this.orderService.Edit(order);
+                }
+
+            }
            
                 var viewModel = new ViewOrderModel()
                 {
@@ -502,8 +550,9 @@ namespace CityTransport.Controllers
                     OfferName = offer.OfferName,
                     OfferPrice = offer.OfferPrice,
                     Duration = order.Duration
+                   
 
-                };
+        };
             
             return View(viewModel);
            
@@ -514,8 +563,10 @@ namespace CityTransport.Controllers
         public IActionResult ViewOrder(ViewOrderModel model)
         {
             string userId = GetCurrentUserId();
+            var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
             var order = this.orderService.GetAllOrders().FirstOrDefault(o => o.UserId == userId);
-           
+            var myInvoice = this.myInvoicesService.GetAllInvoices().FirstOrDefault(i => i.UserId == userId);
+            var offer = this.specialOffersService.GetAllOffers().FirstOrDefault(o => o.SpecialOffersID == user.SpecialOfferId);
 
                
             if (this.ModelState.IsValid)
@@ -525,6 +576,17 @@ namespace CityTransport.Controllers
 
                 this.orderService.Edit(order);
 
+                if (user.SpecialOfferId == 0)
+                {
+                    order.StandartPrice = order.StandartPrice * order.Duration;
+                    this.orderService.Edit(order);
+
+                }
+                else
+                {
+                    order.StandartPrice = offer.OfferPrice * order.Duration;
+                    this.orderService.Edit(order);
+                }
                 return this.RedirectToAction("PaymentMethodPage", "Users");
             }
 
@@ -552,6 +614,8 @@ namespace CityTransport.Controllers
         {
             string userId = GetCurrentUserId();
             var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
+            //var myInvoice = this.myInvoicesService.GetAllInvoices().FirstOrDefault(i => i.UserId == userId);
+           // var myInvoices = this.myInvoicesService.GetAllInvoices().FirstOrDefault(i => i.Id == userId);
 
             if (this.ModelState.IsValid)
             {
@@ -561,6 +625,26 @@ namespace CityTransport.Controllers
                 model.Card.StartDate = DateTime.Today;
                 model.Card.EndDate = DateTime.Today.AddDays(6);
                 model.Card.StandartPrice = 0.0;
+
+                var MyInvoices = new MyInvoices
+                {
+                    UserId = GetCurrentUserId(),
+                    TransportKind = "All Kind",
+                    TransportType = "",
+                    TransportNumber = "",
+                    StartDate = DateTime.Today,
+                    EndDate = DateTime.Today.AddDays(6),
+                    StandartPrice = 0,
+                    Duration = 0
+
+                };
+                var SpecialOffers = new SpecialOffers
+                {
+                    OfferName = "",
+                    OfferPrice = 0
+                };
+                this.specialOffersService.Add(SpecialOffers);
+                this.myInvoicesService.Add(MyInvoices);
 
                 ViewData["Message"] = "Congratularions, You have 6 Days Free for All Kind Ttansports!";
 
@@ -589,7 +673,9 @@ namespace CityTransport.Controllers
                 SpecialOfferId = user.SpecialOfferId,
                 Duration = order.Duration,
                 OfferPrice = offer.OfferPrice,
-                StandartPrice = card.StandartPrice,
+                //StandartPrice = card.StandartPrice,
+                StandartPrice = order.StandartPrice,
+
 
                 MyInvoices = new MyInvoices()
                 
@@ -605,6 +691,7 @@ namespace CityTransport.Controllers
         public IActionResult PaymentMethodPage(PaymentMethodPageModel model)
         {
            string userId = GetCurrentUserId();
+            var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
             var card = this.cardService.GetAllCards().FirstOrDefault(c => c.UserId == userId);
             var order = this.orderService.GetAllOrders().FirstOrDefault(or => or.UserId == userId);
            
@@ -616,7 +703,7 @@ namespace CityTransport.Controllers
                 TransportNumber = order.TransportNumber,
                 StartDate = order.StartDate,
                 EndDate = order.StartDate.AddMonths(order.Duration),
-                StandartPrice = order.StandartPrice*order.Duration,
+                StandartPrice = order.StandartPrice,
                 Duration = order.Duration
 
             };
@@ -627,9 +714,52 @@ namespace CityTransport.Controllers
                 card.StartDate = DateTime.Today;
                 card.EndDate = DateTime.Today.AddMonths(order.Duration);
 
-              
-              
                 this.cardService.Edit(card);
+
+                //Sending email notification
+                //==============================================================
+              
+
+                    var message = new MimeMessage();
+
+                    message.From.Add(new MailboxAddress("City Transport", "citytransportfinalproject@gmail.com"));
+
+                    message.To.Add(new MailboxAddress("", user.Email));
+
+                    message.Subject = "Transport Card Successfully Charged";
+
+
+
+                    message.Body = new TextPart("plain")
+                    {
+                        Text = "Hi " + user.FirstName + " " + user.LastName + ", " +
+                        "\n\n" +
+                        "You've successfully Charged your Transport Card!" +
+                        "\n" +
+                        "For the Period:" + card.StartDate + " - " + card.EndDate +
+                        "\n\n" +
+                        "Regards," +
+                        "\n" +
+                        "City Transport"
+                    };
+
+
+                    using (var client = new MailKit.Net.Smtp.SmtpClient(new ProtocolLogger("smtp.log")))
+                    {
+
+                        client.ServerCertificateValidationCallback = (s, c, h, e) => true;
+
+                        client.Connect("smtp.gmail.com", 587, false);
+
+                        client.Authenticate("citytransportfinalproject@gmail.com", "CityTransport1@");
+
+                        client.Send(message);
+
+                        client.Disconnect(true);
+                    
+                }
+
+                
                 this.orderService.Delete(order);
                 
                 return this.RedirectToAction("UserHomePage", "Users");

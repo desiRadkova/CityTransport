@@ -9,6 +9,7 @@
     <Content Remove="Views\Admin\AdminHomePage.cshtml" />
     <Content Remove="Views\Admin\DeleteChildren.cshtml" />
     <Content Remove="Views\Admin\DeleteUser.cshtml" />
+    <Content Remove="Views\Admin\SendNotification.cshtml" />
     <Content Remove="Views\Admin\ViewChildren.cshtml" />
     <Content Remove="Views\Parents\ParentAddCard.cshtml" />
     <Content Remove="Views\Parents\ParentChangeInformation.cshtml" />
@@ -49,6 +50,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\Admin\SendNotification.cshtml" />
     <None Include="Views\Admin\AddSpecialOffer.cshtml" />
     <None Include="Views\Admin\ViewChildren.cshtml" />
     <None Include="Views\Admin\DeleteUser.cshtml" />

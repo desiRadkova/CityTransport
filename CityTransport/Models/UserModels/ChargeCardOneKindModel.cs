@@ -12,7 +12,7 @@ namespace CityTransport.Models.UserModels
         public User User { get; set; }
        
         public string City { get; set; }
-       // public MyInvoices MyInvoices { get; set; }
+        public MyInvoices MyInvoices { get; set; }
         public Order Order { get; set; }
         public string TransportKind { get; set; }
         public string TransportType { get; set; }

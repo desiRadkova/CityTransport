@@ -348,3 +348,2179 @@ C: .
 S: 250 2.0.0 OK  1644253230 qh12sm372694ejb.172 - gsmtp
 C: QUIT
 S: 221 2.0.0 closing connection qh12sm372694ejb.172 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP ko9sm1675620ejc.60 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=387
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK ko9sm1675620ejc.60 - gsmtp
+S: 250 2.1.5 OK ko9sm1675620ejc.60 - gsmtp
+C: DATA
+S: 354  Go ahead ko9sm1675620ejc.60 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Mon, 07 Feb 2022 20:32:01 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <GPPT6FSQ0GU4.M8FDG4SLFX8C@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644258722 ko9sm1675620ejc.60 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection ko9sm1675620ejc.60 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP u12sm4203538wrw.32 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=387
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK u12sm4203538wrw.32 - gsmtp
+S: 250 2.1.5 OK u12sm4203538wrw.32 - gsmtp
+C: DATA
+S: 354  Go ahead u12sm4203538wrw.32 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 13:08:10 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <SU6KXTGK1GU4.0R0MW4HRHA85@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644491292 u12sm4203538wrw.32 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection u12sm4203538wrw.32 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP r2sm2099676wmq.0 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK r2sm2099676wmq.0 - gsmtp
+S: 250 2.1.5 OK r2sm2099676wmq.0 - gsmtp
+C: DATA
+S: 354  Go ahead r2sm2099676wmq.0 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 13:09:17 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <HEFYY4HK1GU4.Z2OA0O4KEOD31@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644491359 r2sm2099676wmq.0 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection r2sm2099676wmq.0 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP o10sm14981053wri.69 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK o10sm14981053wri.69 - gsmtp
+S: 250 2.1.5 OK o10sm14981053wri.69 - gsmtp
+C: DATA
+S: 354  Go ahead o10sm14981053wri.69 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 13:18:00 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <10J0HJJK1GU4.5JT99UBCZJ2K1@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644491882 o10sm14981053wri.69 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection o10sm14981053wri.69 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP w6sm16781278wrp.51 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK w6sm16781278wrp.51 - gsmtp
+S: 250 2.1.5 OK w6sm16781278wrp.51 - gsmtp
+C: DATA
+S: 354  Go ahead w6sm16781278wrp.51 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 13:18:26 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <4RS5RNJK1GU4.NUI2WPPQDASS2@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644491907 w6sm16781278wrp.51 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection w6sm16781278wrp.51 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP u7sm6702844wrm.15 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK u7sm6702844wrm.15 - gsmtp
+S: 250 2.1.5 OK u7sm6702844wrm.15 - gsmtp
+C: DATA
+S: 354  Go ahead u7sm6702844wrm.15 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 13:18:45 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <1PO7WQJK1GU4.16KU063HQY3A2@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644491927 u7sm6702844wrm.15 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection u7sm6702844wrm.15 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP r11sm9763156wrt.28 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK r11sm9763156wrt.28 - gsmtp
+S: 250 2.1.5 OK r11sm9763156wrt.28 - gsmtp
+C: DATA
+S: 354  Go ahead r11sm9763156wrt.28 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 13:27:47 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <2962L8MK1GU4.TKN5G5MAT16A1@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644492469 r11sm9763156wrt.28 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection r11sm9763156wrt.28 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP b4sm10756991wrw.100 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=387
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK b4sm10756991wrw.100 - gsmtp
+S: 250 2.1.5 OK b4sm10756991wrw.100 - gsmtp
+C: DATA
+S: 354  Go ahead b4sm10756991wrw.100 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 13:29:36 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <J4XRKQMK1GU4.F4TIRIKF8Z7J@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644492578 b4sm10756991wrw.100 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection b4sm10756991wrw.100 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP f20sm1632623wmg.2 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK f20sm1632623wmg.2 - gsmtp
+S: 250 2.1.5 OK f20sm1632623wmg.2 - gsmtp
+C: DATA
+S: 354  Go ahead f20sm1632623wmg.2 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 13:34:48 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <47YJ66OK1GU4.94UQ89H8DBL63@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644492890 f20sm1632623wmg.2 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection f20sm1632623wmg.2 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP 3sm12412312wrz.86 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=387
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK 3sm12412312wrz.86 - gsmtp
+S: 250 2.1.5 OK 3sm12412312wrz.86 - gsmtp
+C: DATA
+S: 354  Go ahead 3sm12412312wrz.86 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 13:39:28 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <UQ61IGPK1GU4.3PPLPJMTZTU2@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644493170 3sm12412312wrz.86 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection 3sm12412312wrz.86 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP r12sm18729432wrw.73 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=387
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK r12sm18729432wrw.73 - gsmtp
+S: 250 2.1.5 OK r12sm18729432wrw.73 - gsmtp
+C: DATA
+S: 354  Go ahead r12sm18729432wrw.73 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 13:46:17 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <17WU2CRK1GU4.QZ1LVW8WDC2P@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644493579 r12sm18729432wrw.73 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection r12sm18729432wrw.73 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP bg26sm1384942wmb.48 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=387
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK bg26sm1384942wmb.48 - gsmtp
+S: 250 2.1.5 OK bg26sm1384942wmb.48 - gsmtp
+C: DATA
+S: 354  Go ahead bg26sm1384942wmb.48 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 13:53:27 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <LMMT8BTK1GU4.R8EL1MOY7CGP@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644494009 bg26sm1384942wmb.48 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection bg26sm1384942wmb.48 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP b15sm12793444wri.96 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK b15sm12793444wri.96 - gsmtp
+S: 250 2.1.5 OK b15sm12793444wri.96 - gsmtp
+C: DATA
+S: 354  Go ahead b15sm12793444wri.96 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 13:55:09 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <X5ZT2STK1GU4.HDIQJHNYNFH11@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644494111 b15sm12793444wri.96 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection b15sm12793444wri.96 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP i15sm1731829wmq.23 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK i15sm1731829wmq.23 - gsmtp
+S: 250 2.1.5 OK i15sm1731829wmq.23 - gsmtp
+C: DATA
+S: 354  Go ahead i15sm1731829wmq.23 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 13:55:57 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <E4DU10UK1GU4.7PKYPYUBFNY23@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644494159 i15sm1731829wmq.23 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection i15sm1731829wmq.23 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP f13sm19435854wri.44 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK f13sm19435854wri.44 - gsmtp
+S: 250 2.1.5 OK f13sm19435854wri.44 - gsmtp
+C: DATA
+S: 354  Go ahead f13sm19435854wri.44 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 14:11:49 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <7IGAHDYK1GU4.V3CRFM50907J1@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644495111 f13sm19435854wri.44 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection f13sm19435854wri.44 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP i15sm3962496wrf.58 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=387
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK i15sm3962496wrf.58 - gsmtp
+S: 250 2.1.5 OK i15sm3962496wrf.58 - gsmtp
+C: DATA
+S: 354  Go ahead i15sm3962496wrf.58 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 14:17:36 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <SH17UYZK1GU4.WHN7Y5ZXOM43@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644495458 i15sm3962496wrf.58 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection i15sm3962496wrf.58 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP w18sm1500659wrl.62 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK w18sm1500659wrl.62 - gsmtp
+S: 250 2.1.5 OK w18sm1500659wrl.62 - gsmtp
+C: DATA
+S: 354  Go ahead w18sm1500659wrl.62 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 14:22:47 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <1OAM7E1L1GU4.NSKQVDF6JC5O1@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644495768 w18sm1500659wrl.62 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection w18sm1500659wrl.62 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP x17sm9514971wrv.107 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK x17sm9514971wrv.107 - gsmtp
+S: 250 2.1.5 OK x17sm9514971wrv.107 - gsmtp
+C: DATA
+S: 354  Go ahead x17sm9514971wrv.107 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 14:25:05 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <VBLM412L1GU4.7VF4N6O4VKTK2@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644495907 x17sm9514971wrv.107 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection x17sm9514971wrv.107 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP d7sm1719615wmb.18 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK d7sm1719615wmb.18 - gsmtp
+S: 250 2.1.5 OK d7sm1719615wmb.18 - gsmtp
+C: DATA
+S: 354  Go ahead d7sm1719615wmb.18 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 14:26:19 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <7ILJDD2L1GU4.GFV69P3VMJ763@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644495981 d7sm1719615wmb.18 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection d7sm1719615wmb.18 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP r12sm18834671wrw.73 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=387
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK r12sm18834671wrw.73 - gsmtp
+S: 250 2.1.5 OK r12sm18834671wrw.73 - gsmtp
+C: DATA
+S: 354  Go ahead r12sm18834671wrw.73 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 14:27:53 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <1YD9YS2L1GU4.FJ0G34ALINWH@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644496075 r12sm18834671wrw.73 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection r12sm18834671wrw.73 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP f7sm12405748wrz.40 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=387
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK f7sm12405748wrz.40 - gsmtp
+S: 250 2.1.5 OK f7sm12405748wrz.40 - gsmtp
+C: DATA
+S: 354  Go ahead f7sm12405748wrz.40 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 14:31:56 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <RBHK2X3L1GU4.WKIC5QJTUM8B@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644496318 f7sm12405748wrz.40 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection f7sm12405748wrz.40 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP z3sm1700723wmp.42 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK z3sm1700723wmp.42 - gsmtp
+S: 250 2.1.5 OK z3sm1700723wmp.42 - gsmtp
+C: DATA
+S: 354  Go ahead z3sm1700723wmp.42 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 14:37:05 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <5VRY8C5L1GU4.5K03LN94233S2@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644496627 z3sm1700723wmp.42 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection z3sm1700723wmp.42 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP g5sm1371438wmk.38 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=387
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK g5sm1371438wmk.38 - gsmtp
+S: 250 2.1.5 OK g5sm1371438wmk.38 - gsmtp
+C: DATA
+S: 354  Go ahead g5sm1371438wmk.38 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 14:39:29 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <6D9IXZ5L1GU4.IE14TQQKU265@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644496770 g5sm1371438wmk.38 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection g5sm1371438wmk.38 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP i6sm20448181wry.33 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK i6sm20448181wry.33 - gsmtp
+S: 250 2.1.5 OK i6sm20448181wry.33 - gsmtp
+C: DATA
+S: 354  Go ahead i6sm20448181wry.33 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 14:42:55 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <248F1Y6L1GU4.MIR4C0CBNZXP3@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644496977 i6sm20448181wry.33 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection i6sm20448181wry.33 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP b2sm20632686wri.88 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=387
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK b2sm20632686wri.88 - gsmtp
+S: 250 2.1.5 OK b2sm20632686wri.88 - gsmtp
+C: DATA
+S: 354  Go ahead b2sm20632686wri.88 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 14:45:22 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <1E6ZDM7L1GU4.220K6Q0JG47V@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644497124 b2sm20632686wri.88 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection b2sm20632686wri.88 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP g15sm19272275wri.82 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK g15sm19272275wri.82 - gsmtp
+S: 250 2.1.5 OK g15sm19272275wri.82 - gsmtp
+C: DATA
+S: 354  Go ahead g15sm19272275wri.82 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 14:46:10 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <6E41BU7L1GU4.K5QELO1JKUYJ3@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644497172 g15sm19272275wri.82 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection g15sm19272275wri.82 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP l20sm1432234wmq.22 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK l20sm1432234wmq.22 - gsmtp
+S: 250 2.1.5 OK l20sm1432234wmq.22 - gsmtp
+C: DATA
+S: 354  Go ahead l20sm1432234wmq.22 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 14:47:32 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <C1RKV78L1GU4.FXA14FI5P20P3@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644497254 l20sm1432234wmq.22 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection l20sm1432234wmq.22 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP w3sm19220285wra.67 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=387
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK w3sm19220285wra.67 - gsmtp
+S: 250 2.1.5 OK w3sm19220285wra.67 - gsmtp
+C: DATA
+S: 354  Go ahead w3sm19220285wra.67 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 14:49:45 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <AHQMXT8L1GU4.IRQ958BPJXC1@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644497387 w3sm19220285wra.67 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection w3sm19220285wra.67 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP n11sm1492838wms.13 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK n11sm1492838wms.13 - gsmtp
+S: 250 2.1.5 OK n11sm1492838wms.13 - gsmtp
+C: DATA
+S: 354  Go ahead n11sm1492838wms.13 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 14:58:43 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <UZ0CSABL1GU4.RWEKTRUE4BSM3@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644497924 n11sm1492838wms.13 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection n11sm1492838wms.13 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP e15sm4148349wrg.6 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK e15sm4148349wrg.6 - gsmtp
+S: 250 2.1.5 OK e15sm4148349wrg.6 - gsmtp
+C: DATA
+S: 354  Go ahead e15sm4148349wrg.6 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 14:59:54 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <VZE0OMBL1GU4.ZGY2MCGP3JNG1@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644497996 e15sm4148349wrg.6 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection e15sm4148349wrg.6 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP l12sm1356730wmd.44 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK l12sm1356730wmd.44 - gsmtp
+S: 250 2.1.5 OK l12sm1356730wmd.44 - gsmtp
+C: DATA
+S: 354  Go ahead l12sm1356730wmd.44 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 15:02:06 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <HXR5F8CL1GU4.INBU4QKDXZ7S3@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644498128 l12sm1356730wmd.44 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection l12sm1356730wmd.44 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP m2sm1676157wmq.35 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK m2sm1676157wmq.35 - gsmtp
+S: 250 2.1.5 OK m2sm1676157wmq.35 - gsmtp
+C: DATA
+S: 354  Go ahead m2sm1676157wmq.35 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 15:13:00 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <FHD3J8FL1GU4.27OPY0S4C4K22@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644498782 m2sm1676157wmq.35 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection m2sm1676157wmq.35 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP g22sm1406667wmh.7 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=387
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK g22sm1406667wmh.7 - gsmtp
+S: 250 2.1.5 OK g22sm1406667wmh.7 - gsmtp
+C: DATA
+S: 354  Go ahead g22sm1406667wmh.7 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 15:20:34 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <RGC9OBHL1GU4.8DK88ISGJB77@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644499236 g22sm1406667wmh.7 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection g22sm1406667wmh.7 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP g6sm18087626wrq.97 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK g6sm18087626wrq.97 - gsmtp
+S: 250 2.1.5 OK g6sm18087626wrq.97 - gsmtp
+C: DATA
+S: 354  Go ahead g6sm18087626wrq.97 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 15:27:38 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <O6MQT9JL1GU4.LSX25WM2F5GN3@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644499660 g6sm18087626wrq.97 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection g6sm18087626wrq.97 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP e8sm4194843wru.37 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK e8sm4194843wru.37 - gsmtp
+S: 250 2.1.5 OK e8sm4194843wru.37 - gsmtp
+C: DATA
+S: 354  Go ahead e8sm4194843wru.37 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 15:30:22 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <SBFOW0KL1GU4.EHAFEU2O0NIK2@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644499824 e8sm4194843wru.37 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection e8sm4194843wru.37 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP o2sm1750541wmq.21 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK o2sm1750541wmq.21 - gsmtp
+S: 250 2.1.5 OK o2sm1750541wmq.21 - gsmtp
+C: DATA
+S: 354  Go ahead o2sm1750541wmq.21 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 15:31:32 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <VVJHGCKL1GU4.ZQ3YBTKWPJYV3@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644499893 o2sm1750541wmq.21 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection o2sm1750541wmq.21 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP t2sm613164wrr.55 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK t2sm613164wrr.55 - gsmtp
+S: 250 2.1.5 OK t2sm613164wrr.55 - gsmtp
+C: DATA
+S: 354  Go ahead t2sm613164wrr.55 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 15:50:03 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <XCXG7GPL1GU4.GYTRVT5G8JNA1@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644501005 t2sm613164wrr.55 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection t2sm613164wrr.55 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP g9sm19875204wri.95 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=388
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK g9sm19875204wri.95 - gsmtp
+S: 250 2.1.5 OK g9sm19875204wri.95 - gsmtp
+C: DATA
+S: 354  Go ahead g9sm19875204wri.95 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 15:51:32 +0200
+C: Subject: Transport Card Expire
+C: Message-Id: <AGZ8ZUPL1GU4.KKQZEJMT7BHW1@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: Your card for city transport will expire in three days!
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644501094 g9sm19875204wri.95 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection g9sm19875204wri.95 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP v9sm7552308wrw.84 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=457
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK v9sm7552308wrw.84 - gsmtp
+S: 250 2.1.5 OK v9sm7552308wrw.84 - gsmtp
+C: DATA
+S: 354  Go ahead v9sm7552308wrw.84 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Thu, 10 Feb 2022 15:52:40 +0200
+C: Subject: Transport Card Successfully Charged
+C: Message-Id: <5CUO76QL1GU4.DX6YGRN6AR232@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: You've successfully Charged your Transport Card!
+C: For the Period:10-Feb-22 12:00:00 AM - 10-Mar-22 12:00:00 AM
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644501161 v9sm7552308wrw.84 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection v9sm7552308wrw.84 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP hh13sm7853496ejb.89 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=424
+C: RCPT TO:<maria.georgieva.ct@gmail.com>
+C: RCPT TO:<desi.radkova.97@gmail.com>
+C: RCPT TO:<admin.test@gmail.c>
+S: 250 2.1.0 OK hh13sm7853496ejb.89 - gsmtp
+S: 250 2.1.5 OK hh13sm7853496ejb.89 - gsmtp
+S: 250 2.1.5 OK hh13sm7853496ejb.89 - gsmtp
+S: 250 2.1.5 OK hh13sm7853496ejb.89 - gsmtp
+C: DATA
+S: 354  Go ahead hh13sm7853496ejb.89 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Fri, 11 Feb 2022 13:05:15 +0200
+C: Subject: Transport Change Notification
+C: Message-Id: <FJK5ZXGV1GU4.FWR5GBJC3Y6Q@DESKTOP-0R3CNCU>
+C: To: maria.georgieva.ct@gmail.com, desi.radkova.97@gmail.com,
+C:  admin.test@gmail.c
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi, 
+C: 8 Tram
+C: The tram will have change of it's trace!
+C: Regards, 
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644577518 hh13sm7853496ejb.89 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection hh13sm7853496ejb.89 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP p19sm7848770ejc.42 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=425
+C: RCPT TO:<maria.georgieva.ct@gmail.com>
+C: RCPT TO:<desi.radkova.97@gmail.com>
+C: RCPT TO:<admin.test@gmail.c>
+S: 250 2.1.0 OK p19sm7848770ejc.42 - gsmtp
+S: 250 2.1.5 OK p19sm7848770ejc.42 - gsmtp
+S: 250 2.1.5 OK p19sm7848770ejc.42 - gsmtp
+S: 250 2.1.5 OK p19sm7848770ejc.42 - gsmtp
+C: DATA
+S: 354  Go ahead p19sm7848770ejc.42 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Fri, 11 Feb 2022 13:13:24 +0200
+C: Subject: Transport Change Notification
+C: Message-Id: <6QDGT6JV1GU4.O9AZPEN4RS081@DESKTOP-0R3CNCU>
+C: To: maria.georgieva.ct@gmail.com, desi.radkova.97@gmail.com,
+C:  admin.test@gmail.c
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi, 
+C: 8 Tram
+C: The tram will have change of it's trace!
+C: Regards, 
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644578006 p19sm7848770ejc.42 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection p19sm7848770ejc.42 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP q5sm7858706eds.82 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=427
+C: RCPT TO:<maria.georgieva.ct@gmail.com>
+C: RCPT TO:<desi.radkova.97@gmail.com>
+C: RCPT TO:<admin.test@gmail.c>
+S: 250 2.1.0 OK q5sm7858706eds.82 - gsmtp
+S: 250 2.1.5 OK q5sm7858706eds.82 - gsmtp
+S: 250 2.1.5 OK q5sm7858706eds.82 - gsmtp
+S: 250 2.1.5 OK q5sm7858706eds.82 - gsmtp
+C: DATA
+S: 354  Go ahead q5sm7858706eds.82 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Fri, 11 Feb 2022 14:57:52 +0200
+C: Subject: Transport Change Notification
+C: Message-Id: <KUY6GZBW1GU4.LF0SNS2X4AQG@DESKTOP-0R3CNCU>
+C: Cc: maria.georgieva.ct@gmail.com, desi.radkova.97@gmail.com,
+C:  admin.test@gmail.c
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi, 
+C: 8 Trolley
+C: The tram will have change of it's trace!
+C: Regards, 
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644584274 q5sm7858706eds.82 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection q5sm7858706eds.82 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP v26sm5494451ejr.15 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=404
+C: RCPT TO:<maria.georgieva.ct@gmail.com>
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK v26sm5494451ejr.15 - gsmtp
+S: 250 2.1.5 OK v26sm5494451ejr.15 - gsmtp
+S: 250 2.1.5 OK v26sm5494451ejr.15 - gsmtp
+C: DATA
+S: 354  Go ahead v26sm5494451ejr.15 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Fri, 11 Feb 2022 15:01:49 +0200
+C: Subject: Transport Change Notification
+C: Message-Id: <PT27M2DW1GU4.NPO673540FAL@DESKTOP-0R3CNCU>
+C: Cc: maria.georgieva.ct@gmail.com, desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi, 
+C: 8 Subway
+C: The tram will have change of it's trace!
+C: Regards, 
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644584511 v26sm5494451ejr.15 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection v26sm5494451ejr.15 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP n2sm8319699ejl.55 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=455
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK n2sm8319699ejl.55 - gsmtp
+S: 250 2.1.5 OK n2sm8319699ejl.55 - gsmtp
+C: DATA
+S: 354  Go ahead n2sm8319699ejl.55 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Fri, 11 Feb 2022 16:08:42 +0200
+C: Subject: Transport Card Successfully Charged
+C: Message-Id: <GDZ29IVW1GU4.7ROJ3I90M8W@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: You've successfully Charged your Transport Card!
+C: For the Period:11-Feb-22 12:00:00 AM - 11-May-22 12:00:00 AM
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644588524 n2sm8319699ejl.55 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection n2sm8319699ejl.55 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP m7sm10073005edb.16 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=456
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK m7sm10073005edb.16 - gsmtp
+S: 250 2.1.5 OK m7sm10073005edb.16 - gsmtp
+C: DATA
+S: 354  Go ahead m7sm10073005edb.16 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Fri, 11 Feb 2022 16:18:24 +0200
+C: Subject: Transport Card Successfully Charged
+C: Message-Id: <WV7DL6YW1GU4.W7K83TRJNJAH@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: You've successfully Charged your Transport Card!
+C: For the Period:11-Feb-22 12:00:00 AM - 11-Apr-22 12:00:00 AM
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644589106 m7sm10073005edb.16 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection m7sm10073005edb.16 - gsmtp

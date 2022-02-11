@@ -10,6 +10,8 @@ namespace CityTransport.Models.UserModels
     public class ChargeCardModel
     {
         public User User { get; set; }
+        public MyInvoices MyInvoices { get; set; }
+        public Card Card { get; set; }
         public string TransportKind { get; set; }
         public List<SelectListItem> KindTypes { get; } = new List<SelectListItem>
         {
@@ -27,9 +29,5 @@ namespace CityTransport.Models.UserModels
             new SelectListItem { Value = "One Year", Text = "One Year"},
          };
 
-        public MyInvoices MyInvoices { get; set; }
-       
-        public Card Card { get; set; }
-    
     }
 }

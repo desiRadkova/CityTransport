@@ -17,6 +17,8 @@ using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using QRCoder;
 using CityTransport.Models.AdminModels;
+using MimeKit;
+using MailKit;
 
 namespace CityTransport.Controllers
 {
@@ -31,6 +33,7 @@ namespace CityTransport.Controllers
         private readonly IMyInvoicesService myInvoicesService;
         private readonly IOrderService orderService;
         private readonly IParentService parentService;
+        private readonly INotificationsService notificationService;
         private readonly UserManager<User> userManager;
         private readonly IMapper mapper;
        
@@ -42,6 +45,7 @@ namespace CityTransport.Controllers
            IMyInvoicesService myInvoicesService,
            IOrderService orderService,
            IParentService parentService,
+           INotificationsService notificationService,
         IHttpContextAccessor httpContextAccessor,
            IMapper mapper,
             UserManager<User> userManager)
@@ -52,6 +56,7 @@ namespace CityTransport.Controllers
             this.myInvoicesService = myInvoicesService;
             this.orderService = orderService;
             this.parentService = parentService;
+            this.notificationService = notificationService;
             this.httpaccessor = httpContextAccessor;
             this.mapper = mapper;
             this.userManager = userManager;
@@ -175,6 +180,82 @@ namespace CityTransport.Controllers
             return this.RedirectToAction("AdminHomePage", "Admin");
         }
 
+        public IActionResult SendNotification(string returnUrl = null)
+        {
+            var viewModel = new SendNotificationModel()
+            {
 
+            };
+            return View(viewModel);
+            // return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SendNotification(SendNotificationModel model)
+        {
+            var not = this.notificationService.GetAllNotifications();
+            var myInvoice = this.myInvoicesService.GetAllInvoices().Where(i => i.TransportKind == "All Kind" && i.TransportKind == "One Kind");
+            var user = this.usersService.GetAllUsers().Where(u => u.Email != null);
+           
+            if (this.ModelState.IsValid)
+            {
+
+                var Notification = new Notifications()
+                {
+                    TransportNumber = model.TransportNumber,
+                    TransportType = model.TransportType,
+                    Message = model.Message,
+                    StartDate = model.StartDate,
+                    EndDate = model.EndDate
+                };
+
+                this.notificationService.Add(Notification);
+
+                //Sending email notification to All Users
+                //==============================================================
+
+                var emailList = user.Where(u => u.Email != "citytransportfinalproject@gmail.com").Select(u => u.Email).ToList();
+
+                var emails = String.Join(",", emailList);
+               
+                var message = new MimeMessage();
+
+                    message.From.Add(new MailboxAddress("City Transport", "citytransportfinalproject@gmail.com"));
+
+               
+                foreach (string toAddresses in emails.Split(','))
+                {
+                    message.Cc.Add(new MailboxAddress("",toAddresses));
+                }
+
+                message.Subject = "Transport Change Notification";
+
+
+
+                    message.Body = new TextPart("plain")
+                    {
+                        Text = "Hi, " + "\n\n" + model.TransportNumber + " " + model.TransportType + "\n" + model.Message + "\n\n" + "Regards, " + "\n" + "City Transport"
+                    };
+
+
+                    using (var client = new MailKit.Net.Smtp.SmtpClient(new ProtocolLogger("smtp.log")))
+                    {
+
+                        client.ServerCertificateValidationCallback = (s, c, h, e) => true;
+
+                        client.Connect("smtp.gmail.com", 587, false);
+
+                        client.Authenticate("citytransportfinalproject@gmail.com", "CityTransport1@");
+
+                        client.Send(message);
+
+                        client.Disconnect(true);
+                    }
+
+                this.notificationService.Delete(Notification);
+                }
+            
+            return this.RedirectToAction("AdminHomePage", "Admin");
+        }
     }
 }

@@ -475,6 +475,26 @@ namespace CityTransport.Controllers
                 model.Card.EndDate = DateTime.Today.AddDays(6);
                 model.Card.StandartPrice = 0.0;
 
+                var MyInvoices = new MyInvoices
+                {
+                    UserId = GetCurrentUserId(),
+                    TransportKind = "All Kind",
+                    TransportType = "",
+                    TransportNumber = "",
+                    StartDate = DateTime.Today,
+                    EndDate = DateTime.Today.AddDays(6),
+                    StandartPrice = 0,
+                    Duration = 0
+
+                };
+                var SpecialOffers = new SpecialOffers
+                {
+                    OfferName = "",
+                    OfferPrice = 0
+                };
+                this.specialOffersService.Add(SpecialOffers);
+                this.myInvoicesService.Add(MyInvoices);
+
                 cardService.Add(model.Card);
 
                 return this.RedirectToAction("ParentUserHomePage", "Parents");
@@ -611,46 +631,87 @@ namespace CityTransport.Controllers
             var parent = this.parentService.GetAllParents().FirstOrDefault(p => p.UserId == userId);//Finding the record for current user
             var children = this.cardService.GetAllCards().FirstOrDefault(c => c.CardNumber == parent.ChildrenCardNumber);//Finding ChildrenCardNumber in Card Table
             var names = this.usersService.GetAllUsers().FirstOrDefault(n => n.Id == children.UserId);
+            var myInvoice = this.myInvoicesService.GetAllInvoices().FirstOrDefault(i => i.UserId == userId);
+            var card = this.cardService.GetAllCards().FirstOrDefault(c => c.UserId == userId);
 
-            if (order == null && user.SpecialOfferId == 113)//For All Kind Createing Order
+            if (card.StartDate != DateTime.Today || card.EndDate.AddDays(-3) != DateTime.Today)
             {
-                var Order = new Order
-                {
-                    TransportKind = "All Kind",
-                    UserId = GetCurrentUserId(),
-                    StartDate = DateTime.Today,
-                    EndDate = DateTime.Today,
-                    StandartPrice = 50
 
-                };
-                
-                    var ChildrenOrder = new Order
+                if (myInvoice.TransportKind == "All Kind")
+                {
+                    ViewData["InfoNotTextAll"] = "Last time you've been charged your card for All Kind Option now you can get 20% off if you select this option.";
+                }
+                else
+                {
+                    ViewData["InfoNotTextOne"] = "Last time you've been charged your card for One Kind Option now you can get 20% off if you select this option.";
+                }
+
+                if (order == null && user.SpecialOfferId == 113)//For All Kind Createing Order
+                {
+                    var Order = new Order
                     {
                         TransportKind = "All Kind",
-                        UserId = children.UserId,
+                        UserId = GetCurrentUserId(),
                         StartDate = DateTime.Today,
                         EndDate = DateTime.Today,
                         StandartPrice = 50
 
                     };
 
+                    var ChildrenOrder = new Order
+                    {
+                        TransportKind = "All Kind",
+                        UserId = children.UserId,
+                        StartDate = DateTime.Today,
+                        EndDate = DateTime.Today,
+                        StandartPrice = 20
 
-                this.orderService.Add(Order);
-                this.orderService.Add(ChildrenOrder);
+                    };
 
-            }else if(order == null && user.SpecialOfferId != 113)
-            {
-                var Order = new Order
+
+                    this.orderService.Add(Order);
+
+                    this.orderService.Add(ChildrenOrder);
+
+                    if (myInvoice != null)// TO DO... - Should be added the creation of myInvoice on addCard Page
+                    {
+                        if (order.TransportKind == "All Kind" && myInvoice.TransportKind == "All Kind")
+                        {
+                            order.StandartPrice = 50 - 0.3;
+                            children.StandartPrice = 50 - 0.3;
+                            this.orderService.Edit(order);
+
+                        }
+
+                    }
+
+                }
+                else if (order == null && user.SpecialOfferId != 113)
                 {
-                    TransportKind = "All Kind",
-                    UserId = GetCurrentUserId(),
-                    StartDate = DateTime.Today,
-                    EndDate = DateTime.Today,
-                    StandartPrice = 50
+                    var Order = new Order
+                    {
+                        TransportKind = "All Kind",
+                        UserId = GetCurrentUserId(),
+                        StartDate = DateTime.Today,
+                        EndDate = DateTime.Today,
+                        StandartPrice = 50
 
+                    };
+                    this.orderService.Add(Order);
                 };
-                this.orderService.Add(Order);
-            };
+                if (myInvoice != null)// TO DO... - Should be added the creation of myInvoice on addCard Page
+                {
+                    if (order.TransportKind == "All Kind" && myInvoice.TransportKind == "All Kind")
+                    {
+                        order.StandartPrice = 50 - (50 * 0.3);
+                        children.StandartPrice = 50 - (50 * 0.3);
+                        this.orderService.Edit(order);
+
+                    }
+
+                }
+            }
+
             return View();
         }
         public IActionResult ParentViewOrder(string returnUrl = null)
@@ -828,6 +889,50 @@ namespace CityTransport.Controllers
 
                 
                 this.cardService.Edit(card);
+
+                //Sending email notification
+                //==============================================================
+
+
+                var message = new MimeMessage();
+
+                message.From.Add(new MailboxAddress("City Transport", "citytransportfinalproject@gmail.com"));
+
+                message.To.Add(new MailboxAddress("", user.Email));
+
+                message.Subject = "Transport Card Successfully Charged";
+
+
+
+                message.Body = new TextPart("plain")
+                {
+                    Text = "Hi " + user.FirstName + " " + user.LastName + ", " +
+                    "\n\n" +
+                    "You've successfully Charged your Transport Card!" +
+                    "\n" +
+                    "For the Period:" + card.StartDate + " - " + card.EndDate +
+                    "\n\n" +
+                    "Regards," +
+                    "\n" +
+                    "City Transport"
+                };
+
+
+                using (var client = new MailKit.Net.Smtp.SmtpClient(new ProtocolLogger("smtp.log")))
+                {
+
+                    client.ServerCertificateValidationCallback = (s, c, h, e) => true;
+
+                    client.Connect("smtp.gmail.com", 587, false);
+
+                    client.Authenticate("citytransportfinalproject@gmail.com", "CityTransport1@");
+
+                    client.Send(message);
+
+                    client.Disconnect(true);
+
+                }
+
                 this.orderService.Delete(order);
                
 

@@ -58,6 +58,15 @@
         <div class="user-info">
             <br>
             <h1>Charge Card</h1><br>
+            @if (ViewData["InfoNotTextAll"] != null)
+            {
+                <p class="error" style="color: #0FB287; ">@ViewData["InfoNotTextAll"].ToString()</p><br></br>
+            }
+            @if (ViewData["InfoNotTextOne"] != null)
+            {
+                <p class="error" style="color: #0FB287; ">@ViewData["InfoNotTextOne"].ToString()</p><br></br>
+            }
+
 
             <div class="drop-down">
                 <p class="label-name">Transport Kind:</p>

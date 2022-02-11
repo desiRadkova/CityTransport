@@ -48,7 +48,7 @@ namespace CityTransport.Models.UserModels
       
         public double TotalPrice
         {
-            get { return StandartPrice * Duration; }
+            get{ return this.StandartPrice * Duration; }
         }
     }
 }
