@@ -425,7 +425,7 @@ namespace CityTransport.Controllers
 
             if (card.StartDate != DateTime.Today || card.EndDate.AddDays(-3) != DateTime.Today)
             {
-                if(myInvoice.TransportKind == "All Kind")
+                if (myInvoice.TransportKind == "All Kind")
                 {
                     ViewData["InfoNotTextAll"] = "Last time you've been charged your card for All Kind Option now you can get 20% off if you select this option.";
                 }
@@ -442,25 +442,16 @@ namespace CityTransport.Controllers
                         StartDate = DateTime.Today,
                         EndDate = DateTime.Today,
                         StandartPrice = 50
-                        
+
                     };
-                   
-                   
+
+
                     this.orderService.Add(Order);
 
-                  
-                };
-               
-            }
-            //if (myInvoice != null && order != null)
-            //    {
-            //        if (order.TransportKind == "All Kind" && myInvoice.TransportKind == "All Kind")
-            //        {
-            //            order.StandartPrice = 50 - (50 * 0.2);
-            //            this.orderService.Edit(order);
-            //        }
 
-            //    }
+                };
+
+            }
 
             ViewData["Error"] = "You've already Charged your card!";
 
@@ -694,31 +685,31 @@ namespace CityTransport.Controllers
             var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
             var card = this.cardService.GetAllCards().FirstOrDefault(c => c.UserId == userId);
             var order = this.orderService.GetAllOrders().FirstOrDefault(or => or.UserId == userId);
-           
-            var MyInvoices = new MyInvoices
-            {
-                UserId = order.UserId,
-                TransportKind = order.TransportKind,
-                TransportType = order.TransportType,
-                TransportNumber = order.TransportNumber,
-                StartDate = order.StartDate,
-                EndDate = order.StartDate.AddMonths(order.Duration),
-                StandartPrice = order.StandartPrice,
-                Duration = order.Duration
 
-            };
-            this.myInvoicesService.Add(MyInvoices);
-            if (this.ModelState.IsValid)
-            {
-               
-                card.StartDate = DateTime.Today;
-                card.EndDate = DateTime.Today.AddMonths(order.Duration);
+                var MyInvoices = new MyInvoices
+                {
+                    UserId = order.UserId,
+                    TransportKind = order.TransportKind,
+                    TransportType = order.TransportType,
+                    TransportNumber = order.TransportNumber,
+                    StartDate = order.StartDate,
+                    EndDate = order.StartDate.AddMonths(order.Duration),
+                    StandartPrice = order.StandartPrice,
+                    Duration = order.Duration
 
-                this.cardService.Edit(card);
+                };
+                this.myInvoicesService.Add(MyInvoices);
+                if (this.ModelState.IsValid)
+                {
 
-                //Sending email notification
-                //==============================================================
-              
+                    card.StartDate = DateTime.Today;
+                    card.EndDate = DateTime.Today.AddMonths(order.Duration);
+
+                    this.cardService.Edit(card);
+
+                    //Sending email notification
+                    //==============================================================
+
 
                     var message = new MimeMessage();
 
@@ -756,14 +747,15 @@ namespace CityTransport.Controllers
                         client.Send(message);
 
                         client.Disconnect(true);
-                    
-                }
 
+                    }
+
+
+                    this.orderService.Delete(order);
+
+                    return this.RedirectToAction("UserHomePage", "Users");
                 
-                this.orderService.Delete(order);
-                
-                return this.RedirectToAction("UserHomePage", "Users");
-                }
+                 }
             
            
             return View(model);

@@ -2524,3 +2524,211 @@ C: .
 S: 250 2.0.0 OK  1644589106 m7sm10073005edb.16 - gsmtp
 C: QUIT
 S: 221 2.0.0 closing connection m7sm10073005edb.16 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP h2sm94970ejo.73 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=428
+C: RCPT TO:<maria.georgieva.ct@gmail.com>
+C: RCPT TO:<desi.radkova.97@gmail.com>
+C: RCPT TO:<admin.test@gmail.c>
+S: 250 2.1.0 OK h2sm94970ejo.73 - gsmtp
+S: 250 2.1.5 OK h2sm94970ejo.73 - gsmtp
+S: 250 2.1.5 OK h2sm94970ejo.73 - gsmtp
+S: 250 2.1.5 OK h2sm94970ejo.73 - gsmtp
+C: DATA
+S: 354  Go ahead h2sm94970ejo.73 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Fri, 11 Feb 2022 17:02:29 +0200
+C: Subject: Transport Change Notification
+C: Message-Id: <DK8Y0CAX1GU4.DXDUJLJU3WTC2@DESKTOP-0R3CNCU>
+C: Cc: maria.georgieva.ct@gmail.com, desi.radkova.97@gmail.com,
+C:  admin.test@gmail.c
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi, 
+C: 
+C: 2 Bus
+C: The tram will have change of it's trace!
+C: 
+C: Regards, 
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644591752 h2sm94970ejo.73 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection h2sm94970ejo.73 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP l16sm4381761ejz.103 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=344
+C: RCPT TO:<maria.georgieva.ct@gmail.com>
+C: RCPT TO:<desi.radkova.97@gmail.com>
+C: RCPT TO:<admin.test@gmail.c>
+S: 250 2.1.0 OK l16sm4381761ejz.103 - gsmtp
+S: 250 2.1.5 OK l16sm4381761ejz.103 - gsmtp
+S: 250 2.1.5 OK l16sm4381761ejz.103 - gsmtp
+S: 250 2.1.5 OK l16sm4381761ejz.103 - gsmtp
+C: DATA
+S: 354  Go ahead l16sm4381761ejz.103 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Fri, 11 Feb 2022 17:09:46 +0200
+C: Subject: Transport Change Notification
+C: Message-Id: <21GS8CCX1GU4.YI43TY1P5LMF3@DESKTOP-0R3CNCU>
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi, 
+C: 
+C: 310 Bus
+C: The bus will have another trace path.
+C: 
+C: Regards, 
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644592188 l16sm4381761ejz.103 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection l16sm4381761ejz.103 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP 24sm1276724ejm.163 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=457
+C: RCPT TO:<desi.radkova.97@gmail.com>
+S: 250 2.1.0 OK 24sm1276724ejm.163 - gsmtp
+S: 250 2.1.5 OK 24sm1276724ejm.163 - gsmtp
+C: DATA
+S: 354  Go ahead 24sm1276724ejm.163 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Sat, 12 Feb 2022 16:31:17 +0200
+C: Subject: Transport Card Successfully Charged
+C: Message-Id: <BEE7EN282GU4.IBDJUSV0XOQ93@DESKTOP-0R3CNCU>
+C: To: desi.radkova.97@gmail.com
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi Desi Radkova, 
+C: 
+C: You've successfully Charged your Transport Card!
+C: For the Period:12-Feb-22 12:00:00 AM - 12-Feb-22 12:00:00 AM
+C: 
+C: Regards,
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644676280 24sm1276724ejm.163 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection 24sm1276724ejm.163 - gsmtp
+Connected to smtp://smtp.gmail.com:587/?starttls=when-available
+S: 220 smtp.gmail.com ESMTP b21sm1304549ejl.145 - gsmtp
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-STARTTLS
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: STARTTLS
+S: 220 2.0.0 Ready to start TLS
+C: EHLO [192.168.0.100]
+S: 250-smtp.gmail.com at your service, [85.196.153.146]
+S: 250-SIZE 35882577
+S: 250-8BITMIME
+S: 250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+S: 250-ENHANCEDSTATUSCODES
+S: 250-PIPELINING
+S: 250-CHUNKING
+S: 250 SMTPUTF8
+C: AUTH PLAIN AGNpdHl0cmFuc3BvcnRmaW5hbHByb2plY3RAZ21haWwuY29tAENpdHlUcmFuc3BvcnQxQA==
+S: 235 2.7.0 Accepted
+C: MAIL FROM:<citytransportfinalproject@gmail.com> SIZE=395
+C: RCPT TO:<maria.georgieva.ct@gmail.com>
+C: RCPT TO:<desi.radkova.97@gmail.com>
+C: RCPT TO:<admin.test@gmail.c>
+S: 250 2.1.0 OK b21sm1304549ejl.145 - gsmtp
+S: 250 2.1.5 OK b21sm1304549ejl.145 - gsmtp
+S: 250 2.1.5 OK b21sm1304549ejl.145 - gsmtp
+S: 250 2.1.5 OK b21sm1304549ejl.145 - gsmtp
+C: DATA
+S: 354  Go ahead b21sm1304549ejl.145 - gsmtp
+C: From: City Transport <citytransportfinalproject@gmail.com>
+C: Date: Sat, 12 Feb 2022 18:47:26 +0200
+C: Subject: Transport Change Notification
+C: Message-Id: <BHBRC6492GU4.04ZP2L5ODIBC3@DESKTOP-0R3CNCU>
+C: MIME-Version: 1.0
+C: Content-Type: text/plain; charset=utf-8
+C: 
+C: Hi, 
+C: 
+C: 310 Bus
+C: The bus 310 will have new start and end time! 
+C: More information will be send on Monday.
+C: 
+C: Regards, 
+C: City Transport
+C: .
+S: 250 2.0.0 OK  1644684448 b21sm1304549ejl.145 - gsmtp
+C: QUIT
+S: 221 2.0.0 closing connection b21sm1304549ejl.145 - gsmtp

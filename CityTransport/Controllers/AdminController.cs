@@ -225,7 +225,7 @@ namespace CityTransport.Controllers
                
                 foreach (string toAddresses in emails.Split(','))
                 {
-                    message.Cc.Add(new MailboxAddress("",toAddresses));
+                    message.Bcc.Add(new MailboxAddress("",toAddresses));
                 }
 
                 message.Subject = "Transport Change Notification";

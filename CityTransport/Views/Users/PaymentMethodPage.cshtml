@@ -1,6 +1,4 @@
 @model CityTransport.Models.UserModels.PaymentMethodPageModel
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,12 +56,13 @@
         <div class="user-info">
             <br>
             <h1>Paymet Method</h1><br>
-            <form method="post">
+            <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
 
                 <div class="role-info">
 
-                    
-                        <p class="offer-name">Your price is:</p><p>@Model.StandartPrice BGN</p>
+
+                    <p class="offer-name">Your price is:</p><p>@Model.StandartPrice BGN</p>
 
 
                     <hr class="invoice-line">
@@ -74,13 +73,19 @@
                     <br><br>
                     <p class="label-name">First Name:</p><input class="input" asp-for="@Model.FirstName" type="text" placeholder="@Model.FirstName" /><br>
                     <br>
+                    <span asp-validation-for="@Model.FirstName" class="text-danger"></span><br>
+                    <br>
                     <p class="label-name">Last Name:</p><input class="input" asp-for="@Model.LastName" type="text" placeholder="@Model.LastName" /><br>
+                    <span asp-validation-for="@Model.LastName" class="text-danger"></span><br>
                     <br>
-                    <p class="label-name">Card Number:</p><input class="input" type="text" placeholder="0000 0000 0000 0000" /><br>
+                    <p class="label-name">Card Number:</p><input class="input" asp-for="@Model.CardNumber" placeholder="1000 0000 0000 0000" type="text"  /><br>
+                    <span asp-validation-for="@Model.CardNumber" class="text-danger"></span><br>
                     <span class="text-danger"></span><br>
-                    <p class="label-name">Expiration Date:</p><input class="input" type="text" placeholder="20/03/21" /><br>
+                    <p class="label-name">Expiration Date:</p><input class="input" asp-for="@Model.ExpireDate" placeholder="2/2/21" type="text"  /><br>
+                    <span asp-validation-for="@Model.ExpireDate" class="text-danger"></span><br>
                     <br>
-                    <p class="label-name">CV Code:</p><input class="input" type="text" placeholder="000" /><br>
+                    <p class="label-name">CV Code:</p><input class="input" asp-for="@Model.CVcode" placeholder="321" type="text" /><br>
+                    <span asp-validation-for="@Model.CVcode" class="text-danger"></span><br>
                     <br>
                     <br>
                 </div>

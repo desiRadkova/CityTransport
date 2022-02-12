@@ -63,6 +63,7 @@ namespace CityTransport.Controllers
             string userId = GetCurrentUserId();
             var user = this.usersService.GetAllUsers().FirstOrDefault(u => u.Id == userId);
             var card = this.cardService.GetAllCards().FirstOrDefault(c => c.UserId == userId);
+            var parent = this.parentService.GetAllParents().FirstOrDefault(p => p.UserId == userId);
 
             usersService.Edit(user);
             if (card == null)
@@ -81,6 +82,10 @@ namespace CityTransport.Controllers
                 City = user.City
 
             };
+            if(parent == null)
+            {
+                ViewData["Error"] = "To charge your card as Parent you should first add your children!";
+            }
 
             //Sending email notification
             //==============================================================
@@ -711,7 +716,7 @@ namespace CityTransport.Controllers
 
                 }
             }
-
+            ViewData["Error"] = "You've already Charged your card!";
             return View();
         }
         public IActionResult ParentViewOrder(string returnUrl = null)
@@ -723,7 +728,18 @@ namespace CityTransport.Controllers
             var parent = this.parentService.GetAllParents().FirstOrDefault(p => p.UserId == userId);//Finding the record for current user
             var children = this.cardService.GetAllCards().FirstOrDefault(c => c.CardNumber == parent.ChildrenCardNumber);//Finding ChildrenCardNumber in Card Table
             var names = this.usersService.GetAllUsers().FirstOrDefault(n => n.Id == children.UserId);
+            var myInvoice = this.myInvoicesService.GetAllInvoices().FirstOrDefault(i => i.UserId == userId);
 
+
+            if (myInvoice != null && order != null)
+            {
+                if (order.TransportKind == "All Kind" && myInvoice.TransportKind == "All Kind")
+                {
+                    order.StandartPrice = 50 - (50 * 0.3);
+                    this.orderService.Edit(order);
+                }
+
+            }
 
             var viewModel = new ParentViewOrderModel()
             {

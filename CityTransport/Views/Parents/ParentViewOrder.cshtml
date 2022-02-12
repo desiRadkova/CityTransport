@@ -75,7 +75,7 @@
                                               }
                                               <p class="label-name">Start Date: @Model.StartDate.ToShortDateString() </p><br>
                                               <p class="label-name">Price: @Model.StandartPrice BGN</p><br>
-                                              @if (Model.SpecialOfferId != null)
+                                              @if (Model.SpecialOfferId != 0)
                                               {
                                                   <p class="label-name">Special Offer Name:@Model.OfferName</p><br>
                                                   <p class="label-name">Special Offer Price:@Model.OfferPrice BGN</p><br>}

@@ -60,7 +60,7 @@
                                               </select>
                                           </div></br></br>
                                           <p class="label-name">Notification Text:</p><br>
-                                          <input asp-for="@Model.Message" type="text" value=@Model.Message class="input" placeholder="@Html.DisplayFor(model => model.Message)" /><br><br>
+                                          <textarea asp-for="@Model.Message" type="text" value=@Model.Message class="input" placeholder="@Html.DisplayFor(model => model.Message)"></textarea><br><br>
                                           <span asp-validation-for="@Model.Message" class="text-danger"></span><br>
                                           <input asp-for="@Model.StartDate" type="text" value=@Model.StartDate class="input" placeholder="@Html.DisplayFor(model => model.StartDate)" /><br><br>
                                           <span asp-validation-for="@Model.StartDate" class="text-danger"></span><br>

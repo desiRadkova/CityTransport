@@ -9,7 +9,7 @@
     <!--CSS files-->
     <link rel="stylesheet" href="~/../frontEnd/css/parent-main.css">
     <link rel="stylesheet" href="~/../frontEnd/css/bootstrap.min.css">
-
+    <script type='text/javascript' src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -73,9 +73,22 @@
                 @Html.DropDownList("url", new SelectList(new[]{
 new SelectListItem { Text = "All Kind", Value = Url.Action("ParentViewOrder", "Parents") },
 new SelectListItem { Text = "One Kind", Value = Url.Action("ParentChargeCard", "Users") },}, "Value", "Text"),
-"Select Transport Kind", new { id = "urlId" })<br>
+"Select Transport Kind", new { id = "urlId" })
 
-            </div></br>
+                <br>
+                 @if (ViewData["Error"] != null)
+            {
+                <script>
+                    $(document).ready(function () {
+                        alert('You have already charged your card!');
+                        window.location.href = 'ParentUserHomePage';
+                    });
+                </script>
+            }
+            </div>
+
+
+
         </div>
 
         <!--JavaScript files-->

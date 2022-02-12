@@ -66,6 +66,15 @@
             {
                 <img src="~/../frontEnd/images/male-green.png" alt="User Icon" width="150" height="145"><br>
             }
+            @if (ViewData["Error"] != null)
+            {
+                <script>
+                    $(document).ready(function () {
+                        alert('To charge your card as Parent you should first add your children!');
+                        window.location.href = 'ParentChildrenCard';
+                    });
+                </script>
+            }
 
             @if (DateTime.Today == Model.NotificationDay.Date)
             {

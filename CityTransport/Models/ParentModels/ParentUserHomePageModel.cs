@@ -9,6 +9,7 @@ namespace CityTransport.Models.ParentModels
     public class ParentUserHomePageModel
     {
         public User User { get; set; }
+        public Parent Parent { get; set; }
         public string FirstName { get; set; }
 
         public string Gender { get; set; }
